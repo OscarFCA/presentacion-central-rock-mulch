@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentación · Central Rock &amp; Mulch × BubbleMesh</title>
+<link rel="icon" type="image/png" href="assets/icon-central-rock-mulch.png">
+<link rel="apple-touch-icon" href="assets/icon-central-rock-mulch.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -131,21 +134,19 @@
         <div style="transform:scale(0.62); transform-origin:center;">
           <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 900 }}" height="{{ 560 }}" url="centralrockandmulch.com" hint-size="560,350">
             <div style="width:100%; height:100%; background:#F5F4F0; display:flex; flex-direction:column;">
-              <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 32px; border-bottom:1px solid rgba(11,11,11,0.08);">
-                <div style="font-family:'Anton',sans-serif; font-size:14px;">CENTRAL R&amp;M</div>
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 32px; border-bottom:1px solid rgba(11,11,11,0.08); background:#F5F4F0;">
+                <img src="assets/logo-central-rock-mulch.png" alt="Central Rock &amp; Mulch" style="height:34px; width:auto; display:block;">
                 <div style="display:flex; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:10px;">
                   <span style="{{ mockLangEsStyle }}">ES</span>
                   <span style="{{ mockLangEnStyle }}">EN</span>
                 </div>
               </div>
-              <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:0;">
-                <div style="padding:36px; display:flex; flex-direction:column; justify-content:center;">
-                  <div style="font-family:'Anton',sans-serif; font-size:{{ mockHeadlineSize }}px; line-height:1.05; margin-bottom:16px;">{{ mockHeadline }}</div>
-                  <div style="font-size:12px; color:rgba(11,11,11,0.6); margin-bottom:16px; line-height:1.5;">{{ mockSubcopy }}</div>
-                  <div style="display:inline-block; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.04em; text-transform:uppercase; padding:9px 16px; border-radius:6px; width:fit-content;">{{ mockCta }}</div>
-                </div>
-                <div style="background:repeating-linear-gradient(135deg, rgba(138,162,123,0.18) 0px, rgba(138,162,123,0.18) 2px, rgba(245,244,240,1) 2px, rgba(245,244,240,1) 10px); display:flex; align-items:center; justify-content:center;">
-                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B8159; text-align:center; padding:16px; white-space:pre-line;">{{ mockPhoto }}</div>
+              <div style="flex:1; position:relative; background-image:url('assets/hero-garden.jpg'); background-size:cover; background-position:center; display:flex; align-items:center;">
+                <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(11,11,11,0.78) 0%, rgba(11,11,11,0.5) 42%, rgba(11,11,11,0.08) 100%);"></div>
+                <div style="position:relative; padding:0 44px; max-width:520px; color:#F5F4F0;">
+                  <div style="font-family:'Anton',sans-serif; font-size:{{ mockHeadlineSize }}px; line-height:1.12; margin-bottom:14px; text-shadow:0 1px 8px rgba(0,0,0,0.4);">{{ mockHeadline }}</div>
+                  <div style="font-size:12px; color:rgba(245,244,240,0.92); margin-bottom:18px; line-height:1.5; text-shadow:0 1px 6px rgba(0,0,0,0.4);">{{ mockSubcopy }}</div>
+                  <div style="display:inline-block; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.04em; text-transform:uppercase; padding:10px 18px; border-radius:6px; width:fit-content;">{{ mockCta }}</div>
                 </div>
               </div>
             </div>
@@ -510,10 +511,9 @@ class Component extends DCLogic {
         m1Li3: `Ciclo de Google Business Profile: fotos, publicaciones y respuesta a reseñas`,
         m1Li4: `Soporte técnico del sitio (los proyectos nuevos se cotizan aparte)`,
 
-        mockHeadline: `Grava #57 disponible hoy.`,
-        mockSubcopy: `$45/yarda. Recoge en sucursal o pide entrega.`,
-        mockCta: `Cotizar por volumen`,
-        mockPhoto: `FOTO · jardín\nresidencial terminado`,
+        mockHeadline: `El material en el que tu jardinero ya confía — y el que necesitas para tu proyecto de fin de semana.`,
+        mockSubcopy: `Piedra, grava y mulch para jardineros profesionales y dueños de casa manos a la obra.`,
+        mockCta: `Pide tu cotización`,
 
         iosVizTitle: `Visualizador IA`,
         iosVizHead: `Visualiza tu jardín`,
@@ -627,10 +627,9 @@ class Component extends DCLogic {
         m1Li3: `Google Business Profile cycle: photos, posts and review responses`,
         m1Li4: `Site technical support (new projects quoted separately)`,
 
-        mockHeadline: `BUILT TO LAST. GROWN TO THRIVE.`,
-        mockSubcopy: `Not sure where to start? Upload a photo of your yard and we'll help you picture it.`,
-        mockCta: `Start your project`,
-        mockPhoto: `PHOTO · finished\nresidential garden`,
+        mockHeadline: `The material your landscaper already trusts — and the material you need for your weekend project.`,
+        mockSubcopy: `Stone, gravel, and mulch for professional landscapers and hands-on homeowners alike.`,
+        mockCta: `Get a quote`,
 
         iosVizTitle: `AI Visualizer`,
         iosVizHead: `Visualize your yard`,
@@ -800,10 +799,9 @@ class Component extends DCLogic {
       mockLangEsStyle: { fontWeight: isEs ? 700 : 400, color: isEs ? '#0B0B0B' : 'rgba(11,11,11,0.4)' },
       mockLangEnStyle: { fontWeight: !isEs ? 700 : 400, color: !isEs ? '#0B0B0B' : 'rgba(11,11,11,0.4)' },
       mockHeadline: d.mockHeadline,
-      mockHeadlineSize: isEs ? 22 : 26,
+      mockHeadlineSize: 21,
       mockSubcopy: d.mockSubcopy,
       mockCta: d.mockCta,
-      mockPhoto: d.mockPhoto,
 
       // terrain dividers
       registerTerrain0: (el) => { this._t0 = el; },
