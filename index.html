@@ -161,19 +161,52 @@
       <div style="display:flex; justify-content:center; order:1;">
         <div style="transform:scale(0.72); transform-origin:center;">
           <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="{{ d.iosVizTitle }}" hint-size="320,650">
-            <div style="padding:18px 16px; background:#F5F4F0; height:100%; box-sizing:border-box; display:flex; flex-direction:column;">
-              <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:2px;">{{ d.iosVizHead }}</div>
-              <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:14px;">{{ d.iosVizSub }}</div>
-              <div style="aspect-ratio:4/3; border-radius:10px; background:linear-gradient(135deg,#8AA27B,#6B8159); position:relative; overflow:hidden; margin-bottom:12px; box-shadow:0 4px 12px rgba(11,11,11,0.12);">
-                <div style="position:absolute; inset:0; background:repeating-linear-gradient(135deg, rgba(245,244,240,0.16) 0px, rgba(245,244,240,0.16) 2px, transparent 2px, transparent 9px);"></div>
-                <div style="position:absolute; bottom:8px; left:8px; right:8px; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#F5F4F0; background:rgba(11,11,11,0.35); padding:5px 7px; border-radius:5px; white-space:pre-line;">{{ d.iosVizImg }}</div>
+            <div style="height:100%; width:100%; box-sizing:border-box; background:#F5F4F0;">
+
+              <!-- ESTADO 1 · ENTRADA: sube tu foto + carrusel de materiales -->
+              <div style="{{ vizInputStyle }}">
+                <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:2px;">{{ d.iosVizHead }}</div>
+                <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:12px;">{{ d.iosVizSub }}</div>
+
+                <div onclick="{{ setVizOn }}" style="aspect-ratio:5/4; border:2px dashed rgba(11,11,11,0.25); border-radius:12px; background:#FFFFFF; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; margin-bottom:14px; cursor:pointer;">
+                  <div style="width:36px; height:36px; border-radius:999px; background:rgba(184,106,87,0.14); display:flex; align-items:center; justify-content:center; color:#B86A57; font-size:18px; font-weight:700;">↑</div>
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; color:#0B0B0B;">{{ d.vizUpload }}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; color:rgba(11,11,11,0.45);">{{ d.vizUploadHint }}</div>
+                </div>
+
+                <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:rgba(11,11,11,0.55); margin-bottom:8px;">{{ d.vizChoose }}</div>
+                <div style="display:flex; gap:8px; overflow-x:auto; padding-bottom:4px;">
+                  <div onclick="{{ toggleMat0 }}" style="{{ matCardStyle0 }}">
+                    <div style="height:44px; background:radial-gradient(circle at 30% 30%, #d2ccc1, #a89e8d);"></div>
+                    <div style="font-size:9px; font-weight:600; padding:5px 4px; text-align:center; white-space:nowrap;">{{ d.iosVizOpt1 }}</div>
+                  </div>
+                  <div onclick="{{ toggleMat1 }}" style="{{ matCardStyle1 }}">
+                    <div style="height:44px; background:linear-gradient(135deg,#7a5230,#49301a);"></div>
+                    <div style="font-size:9px; font-weight:600; padding:5px 4px; text-align:center; white-space:nowrap;">{{ d.iosVizOpt2 }}</div>
+                  </div>
+                  <div onclick="{{ toggleMat2 }}" style="{{ matCardStyle2 }}">
+                    <div style="height:44px; background:linear-gradient(135deg,#dccdb0,#b39b74);"></div>
+                    <div style="font-size:9px; font-weight:600; padding:5px 4px; text-align:center; white-space:nowrap;">{{ d.iosVizOpt3 }}</div>
+                  </div>
+                </div>
+
+                <div onclick="{{ setVizOn }}" style="margin-top:auto; text-align:center; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; padding:12px; border-radius:8px; cursor:pointer; box-shadow:0 6px 16px rgba(184,106,87,0.3);">{{ d.vizGenerate }}</div>
+                <div style="margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">{{ d.iosVizFoot }}</div>
               </div>
-              <div style="display:flex; gap:7px; margin-bottom:12px;">
-                <span style="flex:1; text-align:center; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:9px; padding:8px 4px; border-radius:6px;">{{ d.iosVizOpt1 }}</span>
-                <span style="flex:1; text-align:center; background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); color:rgba(11,11,11,0.6); font-family:'Archivo',sans-serif; font-weight:700; font-size:9px; padding:8px 4px; border-radius:6px;">{{ d.iosVizOpt2 }}</span>
-                <span style="flex:1; text-align:center; background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); color:rgba(11,11,11,0.6); font-family:'Archivo',sans-serif; font-weight:700; font-size:9px; padding:8px 4px; border-radius:6px;">{{ d.iosVizOpt3 }}</span>
+
+              <!-- ESTADO 2 · GENERADO: imagen generada con IA (placeholder: assets/hero-garden.jpg) -->
+              <div style="{{ vizGeneratedStyle }}">
+                <div style="flex:1; position:relative; background-image:url('assets/hero-garden.jpg'); background-size:cover; background-position:center;">
+                  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,11,11,0.35) 0%, transparent 28%, transparent 52%, rgba(11,11,11,0.66) 100%);"></div>
+                  <div style="position:absolute; top:12px; left:12px; background:rgba(11,11,11,0.6); color:#F5F4F0; font-family:'IBM Plex Mono',monospace; font-size:8px; padding:5px 9px; border-radius:999px;">✨ {{ d.vizGenBadge }}</div>
+                  <div style="position:absolute; bottom:58px; left:14px; right:14px; color:#F5F4F0;">
+                    <div style="font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.85; margin-bottom:4px;">{{ d.vizWith }}</div>
+                    <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-shadow:0 1px 6px rgba(0,0,0,0.5);">{{ vizMatsLabel }}</div>
+                  </div>
+                  <div onclick="{{ setVizOff }}" style="position:absolute; bottom:14px; left:14px; right:14px; text-align:center; background:rgba(245,244,240,0.95); color:#0B0B0B; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; padding:11px; border-radius:8px; cursor:pointer;">{{ d.vizAgain }}</div>
+                </div>
               </div>
-              <div style="margin-top:auto; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">{{ d.iosVizFoot }}</div>
+
             </div>
           </x-import>
         </div>
@@ -433,6 +466,10 @@ class Component extends DCLogic {
     terrain0Active: false,
     terrain1Active: false,
     scrollY: 0,
+    vizOn: false,
+    mat0: true,
+    mat1: true,
+    mat2: false,
   };
 
   componentDidMount() {
@@ -519,12 +556,19 @@ class Component extends DCLogic {
 
         iosVizTitle: `Visualizador IA`,
         iosVizHead: `Visualiza tu jardín`,
-        iosVizSub: `Sube una foto y prueba materiales`,
-        iosVizImg: `RENDER IA · tu jardín\ncon Grava #57`,
+        iosVizSub: `Sube tu foto y elige materiales`,
         iosVizOpt1: `Grava #57`,
         iosVizOpt2: `Mulch premium`,
         iosVizOpt3: `Piedra decorativa`,
         iosVizFoot: `Cada visualización se guarda en el CRM`,
+        vizUpload: `Sube tu foto`,
+        vizUploadHint: `JPG o PNG · toca para subir`,
+        vizChoose: `Elige materiales`,
+        vizGenerate: `Generar con IA`,
+        vizGenBadge: `Generado con IA`,
+        vizWith: `Materiales aplicados`,
+        vizAgain: `Probar otra combinación`,
+        vizNone: `Selecciona un material`,
 
         m2Badge: `Resuelve · fraude de tarjeta + decisión de compra`,
         m2H3: `Aplicación Web con IA`,
@@ -636,12 +680,19 @@ class Component extends DCLogic {
 
         iosVizTitle: `AI Visualizer`,
         iosVizHead: `Visualize your yard`,
-        iosVizSub: `Upload a photo and try materials`,
-        iosVizImg: `AI RENDER · your yard\nwith Gravel #57`,
+        iosVizSub: `Upload your photo and pick materials`,
         iosVizOpt1: `Gravel #57`,
         iosVizOpt2: `Premium mulch`,
         iosVizOpt3: `Decorative stone`,
         iosVizFoot: `Every visualization is saved to the CRM`,
+        vizUpload: `Upload your photo`,
+        vizUploadHint: `JPG or PNG · tap to upload`,
+        vizChoose: `Choose materials`,
+        vizGenerate: `Generate with AI`,
+        vizGenBadge: `Generated with AI`,
+        vizWith: `Applied materials`,
+        vizAgain: `Try another mix`,
+        vizNone: `Select a material`,
 
         m2Badge: `Solves · card fraud + buying decision`,
         m2H3: `AI Web App`,
@@ -770,6 +821,14 @@ class Component extends DCLogic {
     const pillOn = (color) => ({ ...pillBase, background: color, color: '#F5F4F0' });
     const pillOff = { ...pillBase, background: 'rgba(11,11,11,0.06)', color: '#0B0B0B' };
 
+    // tarjetas de material del visualizador IA
+    const matCard = (on) => ({ flex: '0 0 auto', width: '70px', borderRadius: '8px', overflow: 'hidden', border: on ? '2px solid #B86A57' : '1px solid rgba(11,11,11,0.14)', background: '#FFFFFF', cursor: 'pointer', opacity: on ? 1 : 0.6 });
+    const vizStateBase = { flexDirection: 'column', height: '100%', boxSizing: 'border-box', background: '#F5F4F0' };
+    const selMats = [];
+    if (this.state.mat0) selMats.push(d.iosVizOpt1);
+    if (this.state.mat1) selMats.push(d.iosVizOpt2);
+    if (this.state.mat2) selMats.push(d.iosVizOpt3);
+
     const rowOn = (mod) => (scope === 'Completo' || scope === mod ? 'background:rgba(138,162,123,0.05);' : 'opacity:0.4;');
 
     const sY = this._reducedMotion ? 0 : this.state.scrollY;
@@ -805,6 +864,19 @@ class Component extends DCLogic {
       mockHeadlineSize: 33,
       mockSubcopy: d.mockSubcopy,
       mockCta: d.mockCta,
+
+      // visualizador IA (mockup Aplicación Web) — 2 estados: entrada / generado
+      setVizOn: () => this.setState({ vizOn: true }),
+      setVizOff: () => this.setState({ vizOn: false }),
+      toggleMat0: () => this.setState({ mat0: !this.state.mat0 }),
+      toggleMat1: () => this.setState({ mat1: !this.state.mat1 }),
+      toggleMat2: () => this.setState({ mat2: !this.state.mat2 }),
+      matCardStyle0: matCard(this.state.mat0),
+      matCardStyle1: matCard(this.state.mat1),
+      matCardStyle2: matCard(this.state.mat2),
+      vizInputStyle: { ...vizStateBase, display: this.state.vizOn ? 'none' : 'flex', padding: '18px 16px' },
+      vizGeneratedStyle: { ...vizStateBase, display: this.state.vizOn ? 'flex' : 'none' },
+      vizMatsLabel: selMats.length ? selMats.join(' + ') : d.vizNone,
 
       // terrain dividers
       registerTerrain0: (el) => { this._t0 = el; },
