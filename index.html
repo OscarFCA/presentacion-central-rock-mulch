@@ -30,11 +30,11 @@
     </div>
 
     <nav style="display:flex; align-items:center; gap:28px; font-size:13px; font-weight:500;">
-      <a href="#objetivo" style="color:#0B0B0B;">Objetivo</a>
-      <a href="#propuesta" style="color:#0B0B0B;">Propuesta</a>
-      <a href="#alcance" style="color:#0B0B0B;">Alcance</a>
-      <a href="#presupuesto" style="color:#0B0B0B;">Presupuesto</a>
-      <a href="#contacto" style="color:#0B0B0B;">Contacto</a>
+      <a href="#objetivo" style="color:#0B0B0B;">{{ d.navObjetivo }}</a>
+      <a href="#propuesta" style="color:#0B0B0B;">{{ d.navPropuesta }}</a>
+      <a href="#alcance" style="color:#0B0B0B;">{{ d.navAlcance }}</a>
+      <a href="#presupuesto" style="color:#0B0B0B;">{{ d.navPresupuesto }}</a>
+      <a href="#contacto" style="color:#0B0B0B;">{{ d.navContacto }}</a>
     </nav>
 
     <div style="display:flex; align-items:center; gap:16px;">
@@ -42,7 +42,7 @@
         <button onclick="{{ setLangEs }}" style="{{ langBtnEsStyle }}">ES</button>
         <button onclick="{{ setLangEn }}" style="{{ langBtnEnStyle }}">EN</button>
       </div>
-      <a href="#contacto" style="background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.04em; text-transform:uppercase; padding:11px 20px; border-radius:8px;">Agendar convenio</a>
+      <a href="#contacto" style="background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.04em; text-transform:uppercase; padding:11px 20px; border-radius:8px;">{{ d.ctaAgendar }}</a>
     </div>
   </header>
 
@@ -51,31 +51,31 @@
   <section data-screen-label="Hero" style="position:relative; background:radial-gradient(ellipse 80% 60% at 82% 25%, rgba(138,162,123,0.16), transparent 65%), radial-gradient(ellipse 60% 50% at 5% 90%, rgba(184,106,87,0.08), transparent 70%); overflow:hidden;">
     <div style="position:relative; padding:112px 64px 88px; max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.25fr 0.75fr; gap:40px; align-items:center;">
       <div style="min-width:0; position:relative;">
-        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:24px;">Propuesta comercial · BubbleMesh × Central Rock &amp; Mulch</div>
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:24px;">{{ d.heroEyebrow }}</div>
         <h1 style="font-family: 'Anton','Archivo Black',Impact,sans-serif; font-size: 62px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 32px; max-width: 100%; width: 733px;">
-          De $1.1M a $3.5–4M.<br>Sin haber gastado un dólar en publicidad — todavía.
+          {{ d.heroH1a }}<br>{{ d.heroH1b }}
         </h1><div style="box-sizing: border-box; display: flex; flex-direction: row; gap: 12px; width: 1210px; height: 296px; justify-content: flex-start; position: relative; align-items: center;"><p style="font-family: 'Work Sans',sans-serif; font-size: 19px; line-height: 1.6; color: rgba(11,11,11,0.65); max-width: 640px; margin: 0 0 40px;">
-          Central Rock &amp; Mulch factura $1.1M USD al año con una meta de $3.5–4M para habilitar expansión o franquicia, y lo ha logrado hasta hoy solo con posicionamiento orgánico en Google Maps. Esta propuesta traduce esa base orgánica en un sistema: presencia digital, marketing con estrategia sustentada y funnels automatizados que respetan cómo el negocio realmente opera.
+          {{ d.heroPara }}
         </p><div style="display:flex; justify-content:center; align-items:center; position:relative;">
 
 
         </div><img src="assets/icon-central-rock-mulch.png" alt="" ref="{{ registerHeroIcon }}" style="{{ heroIconStyle }}"><div style="position: absolute; width: 340px; height: 340px; border-radius: 999px; background: radial-gradient(circle, rgba(184,106,87,0.14), transparent 70%); left: 903px; top: -183px;"></div></div>
         <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:48px;">
-          <a href="#propuesta" style="background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px;">Ver la propuesta</a>
-          <a href="#presupuesto" style="border:1px solid #0B0B0B; color:#0B0B0B; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px;">Ir al presupuesto</a>
+          <a href="#propuesta" style="background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px;">{{ d.heroCta1 }}</a>
+          <a href="#presupuesto" style="border:1px solid #0B0B0B; color:#0B0B0B; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px;">{{ d.heroCta2 }}</a>
         </div>
         <div style="display:flex; gap:36px; flex-wrap:wrap; padding-top:32px; border-top:1px solid rgba(11,11,11,0.1);">
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:500;">$1.1M</div>
-            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">Facturación anual actual</div>
+            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">{{ d.heroStat1 }}</div>
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:500; color:#B86A57;">$3.5–4M</div>
-            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">Meta para expansión / franquicia</div>
+            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">{{ d.heroStat2 }}</div>
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:500; color:#6B8159;">$0</div>
-            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">Invertido en publicidad paga</div>
+            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">{{ d.heroStat3 }}</div>
           </div>
         </div>
       </div>
@@ -89,17 +89,17 @@
   <!-- ============ OBJETIVO ============ -->
   <section id="objetivo" data-screen-label="Objetivo" style="padding:72px 64px; max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1.6fr; gap:64px; align-items:start;">
     <div>
-      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#8AA27B; margin-bottom:12px;">Objetivo del proyecto</div>
-      <h2 style="font-family:'Anton',sans-serif; font-size:40px; line-height:1.1; margin:0;">Un sistema, dos compradores, cero fricción.</h2>
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#8AA27B; margin-bottom:12px;">{{ d.objEyebrow }}</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; line-height:1.1; margin:0;">{{ d.objH2 }}</h2>
     </div>
     <div>
       <p style="font-size:18px; line-height:1.6; color:rgba(11,11,11,0.75); margin:0 0 24px;">
-        Convertir la presencia digital de Central Rock &amp; Mulch en un sistema de crecimiento que hable a sus dos compradores reales — el jardinero profesional que necesita precio y disponibilidad en segundos, y el dueño de casa que necesita inspiración antes de decidir — sin duplicar el sitio en dos experiencias distintas, y sin forzar al negocio a adoptar herramientas que contradigan cómo ya opera.
+        {{ d.objPara }}
       </p>
       <div style="display:flex; gap:16px; align-items:center; padding:20px 24px; background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; color:#7C85A3;">OBJETIVO MEDIBLE</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; color:#7C85A3;">{{ d.objMedibleLabel }}</div>
         <div style="height:16px; width:1px; background:rgba(11,11,11,0.15);"></div>
-        <div style="font-size:15px; color:rgba(11,11,11,0.75);">Pasar de crecimiento 100% orgánico a un sistema que sostenga el ritmo hacia $3.5–4M, con datos por colonia que alimenten la decisión de expansión o franquicia.</div>
+        <div style="font-size:15px; color:rgba(11,11,11,0.75);">{{ d.objMedibleText }}</div>
       </div>
     </div>
   </section>
@@ -107,24 +107,24 @@
   <!-- ============ PROPUESTA SEGÚN NECESIDADES ============ -->
   <section id="propuesta" data-screen-label="Propuesta" style="padding:24px 64px 96px; max-width:1280px; margin:0 auto;">
     <div style="text-align:center; margin-bottom:64px;">
-      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:12px;">Propuesta según necesidades</div>
-      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0;">Cuatro módulos, un mismo sistema</h2>
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:12px;">{{ d.propEyebrow }}</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0;">{{ d.propH2 }}</h2>
     </div>
 
     <!-- 3.1 Presencia Digital -->
     <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center; margin-bottom:88px;">
       <div>
-        <span style="display:inline-block; background:rgba(124,133,163,0.14); color:#7C85A3; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Core · Resuelve necesidad #3</span>
-        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Presencia Digital</h3>
-        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 20px;">Sitio bilingüe (EN/ES) con actualización ágil de precios — responde directo al dolor de la volatilidad por combustible — más Google Business Profile y SEO local por colonia.</p>
-        <p style="font-size:13px; font-family:'IBM Plex Mono',monospace; color:#7C85A3; margin:0 0 24px;">Prueba el toggle EN/ES en el encabezado — el mockup a la derecha cambia de densidad según el idioma, tal como haría el sitio real.</p>
-        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; line-height:1.4; margin:0 0 10px;">Tu catálogo cambia con el precio del combustible. Tu web debería seguirle el paso.</p>
-        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.65); margin:0 0 14px;">El dolor que Alejandro mismo describió — tardan semanas en actualizar un precio — no se resuelve con un sitio bonito, se resuelve con un sitio que se edita tan rápido como cambia la realidad de la yarda. Entregables mensuales de este módulo:</p>
+        <span style="display:inline-block; background:rgba(124,133,163,0.14); color:#7C85A3; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.m1Badge }}</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">{{ d.m1H3 }}</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 20px;">{{ d.m1P1 }}</p>
+        <p style="font-size:13px; font-family:'IBM Plex Mono',monospace; color:#7C85A3; margin:0 0 24px;">{{ d.m1Note }}</p>
+        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; line-height:1.4; margin:0 0 10px;">{{ d.m1Bold }}</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.65); margin:0 0 14px;">{{ d.m1P2 }}</p>
         <ul style="margin:0; padding:0 0 0 18px; font-size:14px; line-height:1.7; color:rgba(11,11,11,0.65);">
-          <li>Actualización de catálogo y precios las veces que se necesite en el mes, no solo en el arranque</li>
-          <li>Reporte mensual de posicionamiento local (SEO) para las búsquedas clave por código postal</li>
-          <li>Un ciclo de ajuste a Google Business Profile — fotos, publicaciones, respuesta a reseñas</li>
-          <li>Soporte técnico del sitio (corrección de errores, no proyectos nuevos — esos se cotizan aparte)</li>
+          <li>{{ d.m1Li1 }}</li>
+          <li>{{ d.m1Li2 }}</li>
+          <li>{{ d.m1Li3 }}</li>
+          <li>{{ d.m1Li4 }}</li>
         </ul>
       </div>
       <div style="display:flex; justify-content:center;">
@@ -145,7 +145,7 @@
                   <div style="display:inline-block; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.04em; text-transform:uppercase; padding:9px 16px; border-radius:6px; width:fit-content;">{{ mockCta }}</div>
                 </div>
                 <div style="background:repeating-linear-gradient(135deg, rgba(138,162,123,0.18) 0px, rgba(138,162,123,0.18) 2px, rgba(245,244,240,1) 2px, rgba(245,244,240,1) 10px); display:flex; align-items:center; justify-content:center;">
-                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B8159; text-align:center; padding:16px;">FOTO · jardín<br>residencial terminado</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B8159; text-align:center; padding:16px; white-space:pre-line;">{{ mockPhoto }}</div>
                 </div>
               </div>
             </div>
@@ -158,41 +158,41 @@
     <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center; margin-bottom:88px;">
       <div style="display:flex; justify-content:center; order:1;">
         <div style="transform:scale(0.72); transform-origin:center;">
-          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="Confirmar pedido" hint-size="320,650">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="{{ d.iosPayTitle }}" hint-size="320,650">
             <div style="padding:20px 16px; background:#F5F4F0; height:100%; box-sizing:border-box;">
-              <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:4px;">Elige cómo pagar</div>
-              <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:16px;">Orden #4821 · $612.00</div>
+              <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:4px;">{{ d.iosPayHead }}</div>
+              <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:16px;">{{ d.iosPayOrder }}</div>
               <div style="display:flex; flex-direction:column; gap:10px;">
                 <div style="background:#B86A57; color:#F5F4F0; border-radius:8px; padding:14px; box-shadow:0 4px 12px rgba(11,11,11,0.12);">
-                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">Transferencia (Zelle/ACH)</div>
-                  <div style="font-size:10px; opacity:0.85; margin-top:3px;">Referencia única al confirmar</div>
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">{{ d.iosOpt1 }}</div>
+                  <div style="font-size:10px; opacity:0.85; margin-top:3px;">{{ d.iosOpt1Sub }}</div>
                 </div>
                 <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); border-radius:8px; padding:14px;">
-                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">Depósito bancario</div>
-                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">Datos de cuenta + número de orden</div>
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">{{ d.iosOpt2 }}</div>
+                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">{{ d.iosOpt2Sub }}</div>
                 </div>
                 <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); border-radius:8px; padding:14px;">
-                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">Pago en sucursal</div>
-                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">Agenda tu horario de recogida</div>
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">{{ d.iosOpt3 }}</div>
+                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">{{ d.iosOpt3Sub }}</div>
                 </div>
               </div>
-              <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">Sin campo de tarjeta en ningún punto del flujo</div>
+              <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">{{ d.iosPayFoot }}</div>
             </div>
           </x-import>
         </div>
       </div>
       <div style="order:2;">
-        <span style="display:inline-block; background:rgba(124,133,163,0.14); color:#7C85A3; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Core · Resuelve necesidad #4</span>
-        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Funnels Automatizados</h3>
-        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">"Arma tu pedido" con catálogo y carrito, pero el checkout se resuelve con transferencia, depósito o pago en sucursal — nunca pasarela de tarjeta. Responde directo al fraude ya sufrido vía Square.</p>
-        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0 0 24px;">Incluye CRM básico diferenciado por tipo de cliente y formulario de cotización con dos variantes (jardinero / DIY).</p>
-        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; line-height:1.4; margin:0 0 10px;">Cada pedido armado en línea, sin pelear con una pasarela de tarjeta que ya les costó dinero.</p>
-        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.65); margin:0 0 14px;">El sistema no le pide a Central Rock &amp; Mulch que cambie su política antifraude — la convierte en un flujo digital que la respeta. Entregables mensuales de este módulo:</p>
+        <span style="display:inline-block; background:rgba(124,133,163,0.14); color:#7C85A3; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.m2Badge }}</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">{{ d.m2H3 }}</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">{{ d.m2P1 }}</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0 0 24px;">{{ d.m2P2 }}</p>
+        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; line-height:1.4; margin:0 0 10px;">{{ d.m2Bold }}</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.65); margin:0 0 14px;">{{ d.m2P3 }}</p>
         <ul style="margin:0; padding:0 0 0 18px; font-size:14px; line-height:1.7; color:rgba(11,11,11,0.65);">
-          <li>Reporte mensual de conversión, separado por tipo de cliente (jardinero recurrente vs. DIY de proyecto único) y por colonia</li>
-          <li>Ajuste del flujo "arma tu pedido" según la fricción real detectada en el mes</li>
-          <li>Mantenimiento del CRM y de las plantillas de seguimiento post-consulta</li>
-          <li>Ajuste del formulario de cotización según lo que más se esté pidiendo</li>
+          <li>{{ d.m2Li1 }}</li>
+          <li>{{ d.m2Li2 }}</li>
+          <li>{{ d.m2Li3 }}</li>
+          <li>{{ d.m2Li4 }}</li>
         </ul>
       </div>
     </div>
@@ -200,10 +200,10 @@
     <!-- 3.3 Marketing — Avatar IA -->
     <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center; margin-bottom:56px;">
       <div>
-        <span style="display:inline-block; background:rgba(184,106,87,0.14); color:#B86A57; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Expansión · Resuelve necesidad #5, #9</span>
-        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Marketing con Avatar IA</h3>
-        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">"Captain Aggregates" como territorio de marca recurrente, con pilares de contenido diferenciados por buyer persona en 2 plataformas — no publicaciones sueltas, cada pieza con un porqué documentado.</p>
-        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">Incluye el sprint de campaña navideña con fecha fija (preparación desde octubre).</p>
+        <span style="display:inline-block; background:rgba(184,106,87,0.14); color:#B86A57; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.m3Badge }}</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">{{ d.m3H3 }}</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">{{ d.m3P1 }}</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">{{ d.m3P2 }}</p>
       </div>
       <div style="display:flex; justify-content:center;">
         <div style="transform:scale(0.72); transform-origin:center;">
@@ -215,12 +215,12 @@
               </div>
               <div style="aspect-ratio:1/1; background:linear-gradient(135deg,#C99A3E,#B86A57); display:flex; align-items:center; justify-content:center; position:relative;">
                 <div style="width:70px; height:70px; border-radius:999px; background:#7C85A3; border:4px solid #F5F4F0;"></div>
-                <div style="position:absolute; bottom:8px; left:8px; right:8px; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#F5F4F0; background:rgba(11,11,11,0.35); padding:4px 6px; border-radius:4px;">ilustración · Captain Aggregates en acción</div>
+                <div style="position:absolute; bottom:8px; left:8px; right:8px; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#F5F4F0; background:rgba(11,11,11,0.35); padding:4px 6px; border-radius:4px;">{{ d.igCaption }}</div>
               </div>
               <div style="padding:12px 14px; display:flex; gap:12px; font-size:16px;">
                 <span>♡</span><span>💬</span><span>↗</span>
               </div>
-              <div style="padding:0 14px; font-size:11px; line-height:1.5;"><strong>centralrockandmulch</strong> Nuevo envío de piedra decorativa ya disponible 💪🪨</div>
+              <div style="padding:0 14px; font-size:11px; line-height:1.5;"><strong>centralrockandmulch</strong> {{ d.igPost }}</div>
             </div>
           </x-import>
         </div>
@@ -230,12 +230,12 @@
     <!-- Navidad banner -->
     <div style="background:#0B0B0B; border-radius:16px; padding:48px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-bottom:88px; overflow:hidden;">
       <div>
-        <span style="display:inline-block; background:rgba(201,154,62,0.18); color:#C99A3E; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Sprint estacional · Resuelve necesidad #8</span>
-        <h3 style="font-family:'Anton',sans-serif; font-size:30px; color:#F5F4F0; margin:0 0 14px;">Campaña de árboles de Navidad</h3>
-        <p style="font-size:15px; line-height:1.6; color:rgba(245,244,240,0.7); margin:0;">La experiencia navideña con chocolate, música y árboles montados es el activo de marca más fuerte que ya tienen — y el menos explotado en foto. Este año, campaña segmentada con fecha fija de preparación desde octubre.</p>
+        <span style="display:inline-block; background:rgba(201,154,62,0.18); color:#C99A3E; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.xmasBadge }}</span>
+        <h3 style="font-family:'Anton',sans-serif; font-size:30px; color:#F5F4F0; margin:0 0 14px;">{{ d.xmasH3 }}</h3>
+        <p style="font-size:15px; line-height:1.6; color:rgba(245,244,240,0.7); margin:0;">{{ d.xmasP }}</p>
       </div>
       <div style="aspect-ratio:16/9; border-radius:8px; background:repeating-linear-gradient(135deg, rgba(201,154,62,0.25) 0px, rgba(201,154,62,0.25) 2px, rgba(245,244,240,0.06) 2px, rgba(245,244,240,0.06) 10px); display:flex; align-items:center; justify-content:center;">
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#C99A3E; text-align:center;">FOTO · lote de árboles,<br>familias con chocolate caliente</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#C99A3E; text-align:center; white-space:pre-line;">{{ d.xmasPhoto }}</div>
       </div>
     </div>
 
@@ -255,15 +255,15 @@
             <text x="205" y="52" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">River Oaks</text>
             <text x="96" y="158" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">Montrose</text>
             <text x="222" y="164" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">West U.</text>
-            <text x="160" y="200" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7C85A3">circuito 610</text>
+            <text x="160" y="200" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7C85A3">{{ d.geoLoop }}</text>
           </svg>
         </div>
       </div>
       <div style="order:2;">
-        <span style="display:inline-block; background:rgba(138,162,123,0.16); color:#6B8159; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Retención · Resuelve necesidad #6</span>
-        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Geo-Segmentación por Colonia</h3>
-        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">Campañas dirigidas por código postal hacia las colonias de mayor potencial y menor competencia B2C — el mismo vacío que la competencia (Zarza, San Jacinto, Cowboy) ya deja abierto y hoy no se explota.</p>
-        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">Reporte de leads por colonia, el mismo dato que alimenta la decisión de dónde abrir la siguiente sucursal.</p>
+        <span style="display:inline-block; background:rgba(138,162,123,0.16); color:#6B8159; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.geoBadge }}</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">{{ d.geoH3 }}</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">{{ d.geoP1 }}</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">{{ d.geoP2 }}</p>
       </div>
     </div>
   </section>
@@ -277,92 +277,92 @@
   <!-- ============ ALCANCE ============ -->
   <section id="alcance" data-screen-label="Alcance" style="padding:88px 64px; max-width:1280px; margin:0 auto;">
     <div style="text-align:center; margin-bottom:16px;">
-      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#7C85A3; margin-bottom:12px;">4.1 · Alcance del proyecto</div>
-      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0 0 12px;">Menú modular, no paquete único</h2>
-      <p style="font-size:15px; color:rgba(11,11,11,0.6); max-width:560px; margin:0 auto;">Entra con un compromiso menor y escala. Usa los botones para ver qué incluye cada nivel.</p>
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#7C85A3; margin-bottom:12px;">{{ d.scEyebrow }}</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0 0 12px;">{{ d.scH2 }}</h2>
+      <p style="font-size:15px; color:rgba(11,11,11,0.6); max-width:560px; margin:0 auto;">{{ d.scSub }}</p>
     </div>
 
     <div style="display:flex; justify-content:center; gap:10px; margin:32px 0 40px; flex-wrap:wrap;">
-      <button onclick="{{ setScopeCore }}" style="{{ scopeBtnCoreStyle }}">Core</button>
-      <button onclick="{{ setScopeExpansion }}" style="{{ scopeBtnExpansionStyle }}">Expansión</button>
-      <button onclick="{{ setScopeRetencion }}" style="{{ scopeBtnRetencionStyle }}">Retención</button>
-      <button onclick="{{ setScopeCompleto }}" style="{{ scopeBtnCompletoStyle }}">Sistema Completo</button>
+      <button onclick="{{ setScopeCore }}" style="{{ scopeBtnCoreStyle }}">{{ d.lvlCore }}</button>
+      <button onclick="{{ setScopeExpansion }}" style="{{ scopeBtnExpansionStyle }}">{{ d.lvlExpansion }}</button>
+      <button onclick="{{ setScopeRetencion }}" style="{{ scopeBtnRetencionStyle }}">{{ d.lvlRetencion }}</button>
+      <button onclick="{{ setScopeCompleto }}" style="{{ scopeBtnCompletoStyle }}">{{ d.lvlCompleto }}</button>
     </div>
 
     <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
       <div style="display:grid; grid-template-columns:1fr 220px 2fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
-        <div>Módulo</div><div>Nivel</div><div>Resuelve</div>
+        <div>{{ d.thModulo }}</div><div>{{ d.thNivel }}</div><div>{{ d.thResuelve }}</div>
       </div>
       <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
-        <div style="font-weight:600; font-size:15px;">Presencia Digital</div>
-        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Core</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Sitio bilingüe + Google Business + SEO local</div>
+        <div style="font-weight:600; font-size:15px;">{{ d.modPresencia }}</div>
+        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlCore }}</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvPresencia }}</div>
       </div>
       <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
-        <div style="font-weight:600; font-size:15px;">Funnels Automatizados</div>
-        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Core</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Checkout sin tarjeta + CRM básico</div>
+        <div style="font-weight:600; font-size:15px;">{{ d.modFunnels }}</div>
+        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlCore }}</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvFunnels }}</div>
       </div>
       <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowExpansionExtra }}">
-        <div style="font-weight:600; font-size:15px;">Marketing — Avatar IA</div>
-        <div><span style="background:rgba(184,106,87,0.14); color:#B86A57; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Expansión</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Contenido por pilares, avatar, campaña de Navidad</div>
+        <div style="font-weight:600; font-size:15px;">{{ d.modAvatar }}</div>
+        <div><span style="background:rgba(184,106,87,0.14); color:#B86A57; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlExpansion }}</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvAvatar }}</div>
       </div>
       <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; align-items:center; {{ rowRetencionExtra }}">
-        <div style="font-weight:600; font-size:15px;">Marketing — Geo-Segmentación</div>
-        <div><span style="background:rgba(138,162,123,0.16); color:#6B8159; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Retención</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Campañas por colonia + reporte de leads</div>
+        <div style="font-weight:600; font-size:15px;">{{ d.modGeo }}</div>
+        <div><span style="background:rgba(138,162,123,0.16); color:#6B8159; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlRetencion }}</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvGeo }}</div>
       </div>
     </div>
 
-    <p style="font-size:13px; color:rgba(11,11,11,0.5); margin:20px 0 0; max-width:760px;">Explícitamente fuera de este alcance inicial: motor de IA de diseño de jardines a la medida, presupuesto de medios pagados, producción de contenido en sitio — se cotizan como líneas separadas.</p>
+    <p style="font-size:13px; color:rgba(11,11,11,0.5); margin:20px 0 0; max-width:760px;">{{ d.scOutNote }}</p>
 
     <div style="margin-top:96px;">
       <div style="text-align:center; margin-bottom:16px;">
-        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#7C85A3; margin-bottom:12px;">4.2 · Detalle de entregables</div>
-        <h2 style="font-family:'Anton',sans-serif; font-size:34px; margin:0 0 16px;">Esencial vs. Estándar</h2>
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#7C85A3; margin-bottom:12px;">{{ d.dvEyebrow }}</div>
+        <h2 style="font-family:'Anton',sans-serif; font-size:34px; margin:0 0 16px;">{{ d.dvH2 }}</h2>
       </div>
 
-      <p style="font-size:13px; line-height:1.6; color:rgba(11,11,11,0.55); max-width:820px; margin:0 auto 32px; text-align:center;">Nota de nomenclatura: el nivel <strong>Piloto</strong> de BubbleMesh es exclusivo del Arquitecto Jaime Lazza (Grupo Lazza) en el vertical inmobiliario — no se ofrece ni se menciona en esta propuesta. Central Rock &amp; Mulch se presenta en el nivel <strong>Esencial</strong>: más generoso que el Estándar de mercado por su rol de cliente ancla en el vertical de retail de jardinería/home &amp; garden, pero sin las condiciones ilimitadas reservadas al piloto.</p>
+      <p style="font-size:13px; line-height:1.6; color:rgba(11,11,11,0.55); max-width:820px; margin:0 auto 32px; text-align:center;">{{ d.nomA }}<strong>{{ d.nomPiloto }}</strong>{{ d.nomB }}<strong>{{ d.nomEsencial }}</strong>{{ d.nomC }}</p>
 
       <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
-          <div>Servicio</div><div>Esencial (Central R&amp;M)</div><div>Estándar</div>
+          <div>{{ d.thServicio }}</div><div>{{ d.thEsencial }}</div><div>{{ d.thEstandar }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
-          <div style="font-size:14px;">Página web</div>
-          <div style="font-size:13px; font-weight:600;">1 sitio bilingüe (EN/ES)</div>
+          <div style="font-size:14px;">{{ d.svcWeb }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcWebE }}</div>
           <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
-          <div style="font-size:14px;">Brandbook IA + Design.md</div>
-          <div style="font-size:13px; font-weight:600;">Incluido, con una ronda de ajustes</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+          <div style="font-size:14px;">{{ d.svcBrand }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcBrandE }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
-          <div style="font-size:14px;">Gestión de campañas de marketing</div>
+          <div style="font-size:14px;">{{ d.svcCamp }}</div>
           <div style="font-size:13px; font-weight:600;">Google + Meta (Instagram/Facebook)</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.55);">Google + 1 plataforma</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">{{ d.svcCampS }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
-          <div style="font-size:14px;">Estrategia de marketing digital</div>
-          <div style="font-size:13px; font-weight:600;">Mensual</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.55);">Mensual</div>
+          <div style="font-size:14px;">{{ d.svcStrat }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.monthly }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">{{ d.monthly }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
-          <div style="font-size:14px;">Creación de Avatar de IA</div>
-          <div style="font-size:13px; font-weight:600;">1 ("Captain Aggregates")</div>
+          <div style="font-size:14px;">{{ d.svcAvatar }}</div>
+          <div style="font-size:13px; font-weight:600;">1 (&quot;Captain Aggregates&quot;)</div>
           <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
-          <div style="font-size:14px;">Chatbot IA</div>
-          <div style="font-size:13px; font-weight:600;">Implementación + optimización mensual</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.55);">Optimización trimestral (solo plan anual)</div>
+          <div style="font-size:14px;">{{ d.svcChat }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcChatE }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">{{ d.svcChatS }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
-          <div style="font-size:14px;">Paquete de contenido</div>
-          <div style="font-size:13px; font-weight:600;">4 publicaciones/semana (1 post, 1 video, 2 stories)</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.55);">3 publicaciones/semana (1 post, 1 video, 1 story)</div>
+          <div style="font-size:14px;">{{ d.svcContent }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcContentE }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">{{ d.svcContentS }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
           <div style="font-size:14px;">Community Manager</div>
@@ -375,74 +375,74 @@
           <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
-          <div style="font-size:14px;">Plataforma a la medida con IA (MVP)</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido — motor de diseño de jardines se cotiza aparte una vez definido el alcance</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+          <div style="font-size:14px;">{{ d.svcMvp }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.svcMvpE }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; align-items:center;">
-          <div style="font-size:14px;">Descuento con productoras aliadas</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+          <div style="font-size:14px;">{{ d.svcDisc }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
         </div>
       </div>
 
-      <p style="font-size:13px; line-height:1.6; color:rgba(11,11,11,0.5); max-width:820px; margin:24px auto 0;"><strong style="color:rgba(11,11,11,0.7);">Por qué el paquete de contenido dice 4 y no 6:</strong> la tabla de referencia de Bubble Prop ofrece 6 publicaciones/semana a nivel piloto porque ese cliente ya tiene un mecanismo de producción resuelto. Para Central Rock &amp; Mulch ese mecanismo todavía está pendiente — prometer 6 antes de resolverlo es el mismo error que ya cometieron las agencias anteriores del cliente: contenido sin sustento detrás.</p>
+      <p style="font-size:13px; line-height:1.6; color:rgba(11,11,11,0.5); max-width:820px; margin:24px auto 0;"><strong style="color:rgba(11,11,11,0.7);">{{ d.fnStrong }}</strong>{{ d.fnBody }}</p>
     </div>
   </section>
 
   <!-- ============ PRESUPUESTO ============ -->
   <section id="presupuesto" data-screen-label="Presupuesto" style="padding:24px 64px 96px; max-width:1280px; margin:0 auto;">
     <div style="text-align:center; margin-bottom:40px;">
-      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:12px;">Presupuesto del proyecto</div>
-      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0;">Precios de lanzamiento</h2>
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:12px;">{{ d.buEyebrow }}</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0;">{{ d.buH2 }}</h2>
     </div>
 
     <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
-        <div>Módulo</div><div style="text-align:right;">Mensualidad</div><div style="text-align:right;">Configuración inicial</div>
+        <div>{{ d.thModulo }}</div><div style="text-align:right;">{{ d.thMensualidad }}</div><div style="text-align:right;">{{ d.thConfig }}</div>
       </div>
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
-        <div style="font-size:15px;">Presencia Digital</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$1,800</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$4,500</div>
+        <div style="font-size:15px;">{{ d.modPresencia }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p1m }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p1s }}</div>
       </div>
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
-        <div style="font-size:15px;">Funnels Automatizados</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$2,400</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$5,500</div>
+        <div style="font-size:15px;">{{ d.modFunnels }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p2m }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p2s }}</div>
       </div>
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowExpansionExtra }}">
-        <div style="font-size:15px;">Marketing — Avatar IA</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$2,600</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$1,500</div>
+        <div style="font-size:15px;">{{ d.modAvatar }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p3m }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p3s }}</div>
       </div>
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowRetencionExtra }}">
-        <div style="font-size:15px;">Marketing — Geo-Segmentación</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$1,900</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$3,000</div>
+        <div style="font-size:15px;">{{ d.modGeo }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p4m }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p4s }}</div>
       </div>
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:22px 24px; align-items:center; {{ rowCompletoExtra }}">
-        <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:16px;">Sistema Completo (4 módulos)</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">$7,200</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">$11,000</div>
+        <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:16px;">{{ d.modCompleto }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">{{ pTm }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">{{ pTs }}</div>
       </div>
     </div>
 
     <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding:20px 24px; background:rgba(124,133,163,0.08); border-radius:8px;">
-      <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.03em; color:#7C85A3;">Nivel seleccionado: {{ scopeLabel }}</div>
-      <div style="font-family:'IBM Plex Mono',monospace; font-size:16px;">{{ scopeMonthlyLabel }} /mes · {{ scopeSetupLabel }} inicial</div>
+      <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.03em; color:#7C85A3;">{{ d.selLevel }}: {{ scopeLabel }}</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:16px;">{{ scopeMonthlyLabel }} {{ d.perMonth }} · {{ scopeSetupLabel }} {{ d.setupWord }}</div>
     </div>
-    <p style="font-size:12px; color:rgba(11,11,11,0.45); margin:10px 0 0;">*Geo-Segmentación no incluye presupuesto de medios pagados — se define aparte. Precios ancla del vertical retail de jardinería, calibrados a benchmarks de EE.UU. 2026.</p>
+    <p style="font-size:12px; color:rgba(11,11,11,0.45); margin:10px 0 0;">{{ d.buNote }}</p>
   </section>
 
   <!-- ============ CIERRE / CONTACTO ============ -->
   <section id="contacto" data-screen-label="Contacto" style="background:#0B0B0B; color:#F5F4F0; padding:96px 64px;">
     <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.3fr 1fr; gap:64px;">
       <div>
-        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#8AA27B; margin-bottom:20px;">Gracias</div>
-        <h2 style="font-family:'Anton',sans-serif; font-size:40px; line-height:1.15; margin:0 0 24px; max-width:520px;">Gracias por la confianza y por compartir el contexto completo de Central Rock &amp; Mulch.</h2>
-        <p style="font-size:16px; line-height:1.65; color:rgba(245,244,240,0.7); max-width:520px; margin:0 0 16px;">El mapa de colonias, el análisis de competencia, la visión detrás de Captain Aggregates — esta propuesta está construida sobre eso, no sobre un paquete genérico. Quedamos atentos a tus comentarios.</p>
-        <p style="font-size:13px; font-family:'IBM Plex Mono',monospace; color:rgba(245,244,240,0.4); max-width:520px; margin:0;">Esta página es material de presentación para la sesión del jueves — no sustituye la cotización formal ni el convenio, y las muestras visuales de arriba se reemplazan por fotografía real una vez firmado.</p>
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#8AA27B; margin-bottom:20px;">{{ d.coEyebrow }}</div>
+        <h2 style="font-family:'Anton',sans-serif; font-size:40px; line-height:1.15; margin:0 0 24px; max-width:520px;">{{ d.coH2 }}</h2>
+        <p style="font-size:16px; line-height:1.65; color:rgba(245,244,240,0.7); max-width:520px; margin:0 0 16px;">{{ d.coP1 }}</p>
+        <p style="font-size:13px; font-family:'IBM Plex Mono',monospace; color:rgba(245,244,240,0.4); max-width:520px; margin:0;">{{ d.coP2 }}</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:16px;">
         <div style="background:rgba(245,244,240,0.06); border:1px solid rgba(245,244,240,0.12); border-radius:8px; padding:20px 24px;">
@@ -452,7 +452,7 @@
         </div>
         <div style="background:rgba(245,244,240,0.06); border:1px solid rgba(245,244,240,0.12); border-radius:8px; padding:20px 24px;">
           <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">Emily Sisalima</div>
-          <div style="font-size:13px; color:rgba(245,244,240,0.55); margin-bottom:8px;">Sr. Account Manager</div>
+          <div style="font-size:13px; color:rgba(245,244,240,0.55); margin-bottom:8px;">{{ d.emilyRole }}</div>
           <a href="mailto:emily@bubble-mesh.com" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#8AA27B; display:block; margin-bottom:2px;">emily@bubble-mesh.com</a>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(245,244,240,0.55);">(+52) 777 417 1226</div>
         </div>
@@ -484,19 +484,19 @@ class Component extends DCLogic {
     const animate = this.props.terrainAnimation ?? true;
     if (reduced || !animate) {
       this.setState({ terrain0Active: true, terrain1Active: true });
-      return;
+    } else {
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === this._t0) this.setState({ terrain0Active: true });
+            if (entry.target === this._t1) this.setState({ terrain1Active: true });
+            this._observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      if (this._t0) this._observer.observe(this._t0);
+      if (this._t1) this._observer.observe(this._t1);
     }
-    this._observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target === this._t0) this.setState({ terrain0Active: true });
-          if (entry.target === this._t1) this.setState({ terrain1Active: true });
-          this._observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.4 });
-    if (this._t0) this._observer.observe(this._t0);
-    if (this._t1) this._observer.observe(this._t1);
 
     this._reducedMotion = reduced;
     if (!reduced) {
@@ -519,14 +519,275 @@ class Component extends DCLogic {
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
   }
 
-  scopeData() {
-    const levels = {
-      'Core': { label: 'Core', monthly: 4200, setup: 10000, order: 1 },
-      'Expansión': { label: 'Expansión', monthly: 6800, setup: 11500, order: 2 },
-      'Retención': { label: 'Retención', monthly: 8700, setup: 14500, order: 3 },
-      'Completo': { label: 'Sistema Completo', monthly: 7200, setup: 11000, order: 4 },
+  dict() {
+    // Precios base en USD. La conversión a MXN usa tipo de cambio 20 MXN/USD.
+    const T = {
+      ES: {
+        navObjetivo: `Objetivo`, navPropuesta: `Propuesta`, navAlcance: `Alcance`,
+        navPresupuesto: `Presupuesto`, navContacto: `Contacto`, ctaAgendar: `Agendar convenio`,
+
+        heroEyebrow: `Propuesta comercial · BubbleMesh × Central Rock & Mulch`,
+        heroH1a: `De $1.1M a $3.5–4M.`,
+        heroH1b: `Sin haber gastado un dólar en publicidad — todavía.`,
+        heroPara: `Central Rock & Mulch factura $1.1M USD al año con una meta de $3.5–4M para habilitar expansión o franquicia, y lo ha logrado hasta hoy solo con posicionamiento orgánico en Google Maps. Esta propuesta traduce esa base orgánica en un sistema: presencia digital, marketing con estrategia sustentada y funnels automatizados que respetan cómo el negocio realmente opera.`,
+        heroCta1: `Ver la propuesta`, heroCta2: `Ir al presupuesto`,
+        heroStat1: `Facturación anual actual`,
+        heroStat2: `Meta para expansión / franquicia`,
+        heroStat3: `Invertido en publicidad paga`,
+
+        objEyebrow: `Objetivo del proyecto`,
+        objH2: `Un sistema, dos compradores, cero fricción.`,
+        objPara: `Convertir la presencia digital de Central Rock & Mulch en un sistema de crecimiento que hable a sus dos compradores reales — el jardinero profesional que necesita precio y disponibilidad en segundos, y el dueño de casa que necesita inspiración antes de decidir — sin duplicar el sitio en dos experiencias distintas, y sin forzar al negocio a adoptar herramientas que contradigan cómo ya opera.`,
+        objMedibleLabel: `OBJETIVO MEDIBLE`,
+        objMedibleText: `Pasar de crecimiento 100% orgánico a un sistema que sostenga el ritmo hacia $3.5–4M, con datos por colonia que alimenten la decisión de expansión o franquicia.`,
+
+        propEyebrow: `Propuesta según necesidades`,
+        propH2: `Cuatro módulos, un mismo sistema`,
+
+        m1Badge: `Core · Resuelve necesidad #3`,
+        m1H3: `Presencia Digital`,
+        m1P1: `Sitio bilingüe (EN/ES) con actualización ágil de precios — responde directo al dolor de la volatilidad por combustible — más Google Business Profile y SEO local por colonia.`,
+        m1Note: `Prueba el toggle EN/ES en el encabezado — el mockup a la derecha cambia de densidad según el idioma, tal como haría el sitio real.`,
+        m1Bold: `Tu catálogo cambia con el precio del combustible. Tu web debería seguirle el paso.`,
+        m1P2: `El dolor que Alejandro mismo describió — tardan semanas en actualizar un precio — no se resuelve con un sitio bonito, se resuelve con un sitio que se edita tan rápido como cambia la realidad de la yarda. Entregables mensuales de este módulo:`,
+        m1Li1: `Actualización de catálogo y precios las veces que se necesite en el mes, no solo en el arranque`,
+        m1Li2: `Reporte mensual de posicionamiento local (SEO) para las búsquedas clave por código postal`,
+        m1Li3: `Un ciclo de ajuste a Google Business Profile — fotos, publicaciones, respuesta a reseñas`,
+        m1Li4: `Soporte técnico del sitio (corrección de errores, no proyectos nuevos — esos se cotizan aparte)`,
+
+        mockHeadline: `Grava #57 disponible hoy.`,
+        mockSubcopy: `$45/yarda. Recoge en sucursal o pide entrega.`,
+        mockCta: `Cotizar por volumen`,
+        mockPhoto: `FOTO · jardín\nresidencial terminado`,
+
+        iosPayTitle: `Confirmar pedido`,
+        iosPayHead: `Elige cómo pagar`,
+        iosPayOrder: `Orden #4821 · $612.00`,
+        iosOpt1: `Transferencia (Zelle/ACH)`, iosOpt1Sub: `Referencia única al confirmar`,
+        iosOpt2: `Depósito bancario`, iosOpt2Sub: `Datos de cuenta + número de orden`,
+        iosOpt3: `Pago en sucursal`, iosOpt3Sub: `Agenda tu horario de recogida`,
+        iosPayFoot: `Sin campo de tarjeta en ningún punto del flujo`,
+
+        m2Badge: `Core · Resuelve necesidad #4`,
+        m2H3: `Funnels Automatizados`,
+        m2P1: `"Arma tu pedido" con catálogo y carrito, pero el checkout se resuelve con transferencia, depósito o pago en sucursal — nunca pasarela de tarjeta. Responde directo al fraude ya sufrido vía Square.`,
+        m2P2: `Incluye CRM básico diferenciado por tipo de cliente y formulario de cotización con dos variantes (jardinero / DIY).`,
+        m2Bold: `Cada pedido armado en línea, sin pelear con una pasarela de tarjeta que ya les costó dinero.`,
+        m2P3: `El sistema no le pide a Central Rock & Mulch que cambie su política antifraude — la convierte en un flujo digital que la respeta. Entregables mensuales de este módulo:`,
+        m2Li1: `Reporte mensual de conversión, separado por tipo de cliente (jardinero recurrente vs. DIY de proyecto único) y por colonia`,
+        m2Li2: `Ajuste del flujo "arma tu pedido" según la fricción real detectada en el mes`,
+        m2Li3: `Mantenimiento del CRM y de las plantillas de seguimiento post-consulta`,
+        m2Li4: `Ajuste del formulario de cotización según lo que más se esté pidiendo`,
+
+        m3Badge: `Expansión · Resuelve necesidad #5, #9`,
+        m3H3: `Marketing con Avatar IA`,
+        m3P1: `"Captain Aggregates" como territorio de marca recurrente, con pilares de contenido diferenciados por buyer persona en 2 plataformas — no publicaciones sueltas, cada pieza con un porqué documentado.`,
+        m3P2: `Incluye el sprint de campaña navideña con fecha fija (preparación desde octubre).`,
+        igCaption: `ilustración · Captain Aggregates en acción`,
+        igPost: `Nuevo envío de piedra decorativa ya disponible 💪🪨`,
+
+        xmasBadge: `Sprint estacional · Resuelve necesidad #8`,
+        xmasH3: `Campaña de árboles de Navidad`,
+        xmasP: `La experiencia navideña con chocolate, música y árboles montados es el activo de marca más fuerte que ya tienen — y el menos explotado en foto. Este año, campaña segmentada con fecha fija de preparación desde octubre.`,
+        xmasPhoto: `FOTO · lote de árboles,\nfamilias con chocolate caliente`,
+
+        geoLoop: `circuito 610`,
+        geoBadge: `Retención · Resuelve necesidad #6`,
+        geoH3: `Geo-Segmentación por Colonia`,
+        geoP1: `Campañas dirigidas por código postal hacia las colonias de mayor potencial y menor competencia B2C — el mismo vacío que la competencia (Zarza, San Jacinto, Cowboy) ya deja abierto y hoy no se explota.`,
+        geoP2: `Reporte de leads por colonia, el mismo dato que alimenta la decisión de dónde abrir la siguiente sucursal.`,
+
+        scEyebrow: `4.1 · Alcance del proyecto`,
+        scH2: `Menú modular, no paquete único`,
+        scSub: `Entra con un compromiso menor y escala. Usa los botones para ver qué incluye cada nivel.`,
+        thModulo: `Módulo`, thNivel: `Nivel`, thResuelve: `Resuelve`,
+        lvlCore: `Core`, lvlExpansion: `Expansión`, lvlRetencion: `Retención`, lvlCompleto: `Sistema Completo`,
+        modPresencia: `Presencia Digital`, modFunnels: `Funnels Automatizados`,
+        modAvatar: `Marketing — Avatar IA`, modGeo: `Marketing — Geo-Segmentación`,
+        modCompleto: `Sistema Completo (4 módulos)`,
+        solvPresencia: `Sitio bilingüe + Google Business + SEO local`,
+        solvFunnels: `Checkout sin tarjeta + CRM básico`,
+        solvAvatar: `Contenido por pilares, avatar, campaña de Navidad`,
+        solvGeo: `Campañas por colonia + reporte de leads`,
+        scOutNote: `Explícitamente fuera de este alcance inicial: motor de IA de diseño de jardines a la medida, presupuesto de medios pagados, producción de contenido en sitio — se cotizan como líneas separadas.`,
+
+        dvEyebrow: `4.2 · Detalle de entregables`,
+        dvH2: `Esencial vs. Estándar`,
+        nomA: `Nota de nomenclatura: el nivel `,
+        nomPiloto: `Piloto`,
+        nomB: ` de BubbleMesh es exclusivo del Arquitecto Jaime Lazza (Grupo Lazza) en el vertical inmobiliario — no se ofrece ni se menciona en esta propuesta. Central Rock & Mulch se presenta en el nivel `,
+        nomEsencial: `Esencial`,
+        nomC: `: más generoso que el Estándar de mercado por su rol de cliente ancla en el vertical de retail de jardinería/home & garden, pero sin las condiciones ilimitadas reservadas al piloto.`,
+        thServicio: `Servicio`, thEsencial: `Esencial (Central R&M)`, thEstandar: `Estándar`,
+        notInc: `No incluido`, monthly: `Mensual`,
+        svcWeb: `Página web`, svcWebE: `1 sitio bilingüe (EN/ES)`,
+        svcBrand: `Brandbook IA + Design.md`, svcBrandE: `Incluido, con una ronda de ajustes`,
+        svcCamp: `Gestión de campañas de marketing`, svcCampS: `Google + 1 plataforma`,
+        svcStrat: `Estrategia de marketing digital`,
+        svcAvatar: `Creación de Avatar de IA`,
+        svcChat: `Chatbot IA`, svcChatE: `Implementación + optimización mensual`, svcChatS: `Optimización trimestral (solo plan anual)`,
+        svcContent: `Paquete de contenido`, svcContentE: `4 publicaciones/semana (1 post, 1 video, 2 stories)`, svcContentS: `3 publicaciones/semana (1 post, 1 video, 1 story)`,
+        svcMvp: `Plataforma a la medida con IA (MVP)`, svcMvpE: `No incluido — motor de diseño de jardines se cotiza aparte una vez definido el alcance`,
+        svcDisc: `Descuento con productoras aliadas`,
+        fnStrong: `Por qué el paquete de contenido dice 4 y no 6:`,
+        fnBody: ` la tabla de referencia de Bubble Prop ofrece 6 publicaciones/semana a nivel piloto porque ese cliente ya tiene un mecanismo de producción resuelto. Para Central Rock & Mulch ese mecanismo todavía está pendiente — prometer 6 antes de resolverlo es el mismo error que ya cometieron las agencias anteriores del cliente: contenido sin sustento detrás.`,
+
+        buEyebrow: `Presupuesto del proyecto`,
+        buH2: `Precios de lanzamiento`,
+        thMensualidad: `Mensualidad`, thConfig: `Configuración inicial`,
+        selLevel: `Nivel seleccionado`, perMonth: `/mes`, setupWord: `inicial`,
+        buNote: `*Geo-Segmentación no incluye presupuesto de medios pagados — se define aparte. Precios ancla del vertical retail de jardinería, calibrados a benchmarks de EE.UU. 2026. Cifras en MXN convertidas a un tipo de cambio referencial de 20 MXN/USD; cambia a EN para ver los montos en USD.`,
+
+        coEyebrow: `Gracias`,
+        coH2: `Gracias por la confianza y por compartir el contexto completo de Central Rock & Mulch.`,
+        coP1: `El mapa de colonias, el análisis de competencia, la visión detrás de Captain Aggregates — esta propuesta está construida sobre eso, no sobre un paquete genérico. Quedamos atentos a tus comentarios.`,
+        coP2: `Esta página es material de presentación para la sesión del jueves — no sustituye la cotización formal ni el convenio, y las muestras visuales de arriba se reemplazan por fotografía real una vez firmado.`,
+        emilyRole: `Sr. Account Manager`,
+      },
+      EN: {
+        navObjetivo: `Objective`, navPropuesta: `Proposal`, navAlcance: `Scope`,
+        navPresupuesto: `Budget`, navContacto: `Contact`, ctaAgendar: `Schedule agreement`,
+
+        heroEyebrow: `Commercial proposal · BubbleMesh × Central Rock & Mulch`,
+        heroH1a: `From $1.1M to $3.5–4M.`,
+        heroH1b: `Without spending a single dollar on advertising — yet.`,
+        heroPara: `Central Rock & Mulch bills $1.1M USD a year with a goal of $3.5–4M to enable expansion or franchising, and it has gotten there so far purely on organic positioning in Google Maps. This proposal turns that organic base into a system: digital presence, strategy-backed marketing, and automated funnels that respect how the business actually operates.`,
+        heroCta1: `See the proposal`, heroCta2: `Go to the budget`,
+        heroStat1: `Current annual revenue`,
+        heroStat2: `Target for expansion / franchise`,
+        heroStat3: `Spent on paid advertising`,
+
+        objEyebrow: `Project objective`,
+        objH2: `One system, two buyers, zero friction.`,
+        objPara: `Turn Central Rock & Mulch's digital presence into a growth system that speaks to its two real buyers — the professional landscaper who needs price and availability in seconds, and the homeowner who needs inspiration before deciding — without splitting the site into two separate experiences, and without forcing the business to adopt tools that contradict how it already works.`,
+        objMedibleLabel: `MEASURABLE OBJECTIVE`,
+        objMedibleText: `Move from 100% organic growth to a system that sustains the pace toward $3.5–4M, with neighborhood-level data that feeds the expansion or franchise decision.`,
+
+        propEyebrow: `Proposal by needs`,
+        propH2: `Four modules, one system`,
+
+        m1Badge: `Core · Solves need #3`,
+        m1H3: `Digital Presence`,
+        m1P1: `Bilingual site (EN/ES) with agile price updates — a direct answer to fuel-driven volatility — plus Google Business Profile and local SEO by neighborhood.`,
+        m1Note: `Try the EN/ES toggle in the header — the mockup on the right shifts density based on the language, just like the real site would.`,
+        m1Bold: `Your catalog changes with the price of fuel. Your website should keep up.`,
+        m1P2: `The pain Alejandro described himself — it takes them weeks to update a price — isn't solved with a pretty site, it's solved with a site that edits as fast as the reality of the yard changes. Monthly deliverables for this module:`,
+        m1Li1: `Catalog and price updates as often as needed during the month, not just at launch`,
+        m1Li2: `Monthly local positioning (SEO) report for key searches by ZIP code`,
+        m1Li3: `One Google Business Profile tuning cycle — photos, posts, review responses`,
+        m1Li4: `Site technical support (bug fixes, not new projects — those are quoted separately)`,
+
+        mockHeadline: `BUILT TO LAST. GROWN TO THRIVE.`,
+        mockSubcopy: `Not sure where to start? Upload a photo of your yard and we'll help you picture it.`,
+        mockCta: `Start your project`,
+        mockPhoto: `PHOTO · finished\nresidential garden`,
+
+        iosPayTitle: `Confirm order`,
+        iosPayHead: `Choose how to pay`,
+        iosPayOrder: `Order #4821 · $612.00`,
+        iosOpt1: `Transfer (Zelle/ACH)`, iosOpt1Sub: `Unique reference on confirmation`,
+        iosOpt2: `Bank deposit`, iosOpt2Sub: `Account details + order number`,
+        iosOpt3: `Pay in store`, iosOpt3Sub: `Schedule your pickup time`,
+        iosPayFoot: `No card field at any point in the flow`,
+
+        m2Badge: `Core · Solves need #4`,
+        m2H3: `Automated Funnels`,
+        m2P1: `"Build your order" with catalog and cart, but checkout is settled by transfer, deposit, or in-store payment — never a card gateway. A direct answer to the fraud already suffered via Square.`,
+        m2P2: `Includes a basic CRM differentiated by client type and a quote form with two variants (landscaper / DIY).`,
+        m2Bold: `Every order built online, without fighting a card gateway that already cost them money.`,
+        m2P3: `The system doesn't ask Central Rock & Mulch to change its anti-fraud policy — it turns it into a digital flow that respects it. Monthly deliverables for this module:`,
+        m2Li1: `Monthly conversion report, split by client type (recurring landscaper vs. one-off DIY project) and by neighborhood`,
+        m2Li2: `Tuning of the "build your order" flow based on the real friction detected during the month`,
+        m2Li3: `Maintenance of the CRM and the post-inquiry follow-up templates`,
+        m2Li4: `Adjustment of the quote form based on what's being requested most`,
+
+        m3Badge: `Expansion · Solves need #5, #9`,
+        m3H3: `Marketing with AI Avatar`,
+        m3P1: `"Captain Aggregates" as a recurring brand territory, with content pillars differentiated by buyer persona across 2 platforms — not one-off posts, each piece with a documented reason.`,
+        m3P2: `Includes the Christmas campaign sprint with a fixed date (prep starting in October).`,
+        igCaption: `illustration · Captain Aggregates in action`,
+        igPost: `New decorative stone shipment now available 💪🪨`,
+
+        xmasBadge: `Seasonal sprint · Solves need #8`,
+        xmasH3: `Christmas tree campaign`,
+        xmasP: `The Christmas experience with hot chocolate, music, and set-up trees is the strongest brand asset they already have — and the least exploited in photography. This year, a segmented campaign with a fixed prep date starting in October.`,
+        xmasPhoto: `PHOTO · tree lot,\nfamilies with hot chocolate`,
+
+        geoLoop: `Loop 610`,
+        geoBadge: `Retention · Solves need #6`,
+        geoH3: `Geo-Segmentation by Neighborhood`,
+        geoP1: `Campaigns targeted by ZIP code toward the neighborhoods with the highest potential and lowest B2C competition — the same gap competitors (Zarza, San Jacinto, Cowboy) already leave open and that goes unexploited today.`,
+        geoP2: `Leads report by neighborhood, the same data that feeds the decision of where to open the next branch.`,
+
+        scEyebrow: `4.1 · Project scope`,
+        scH2: `Modular menu, not a single package`,
+        scSub: `Start with a smaller commitment and scale. Use the buttons to see what each level includes.`,
+        thModulo: `Module`, thNivel: `Level`, thResuelve: `Solves`,
+        lvlCore: `Core`, lvlExpansion: `Expansion`, lvlRetencion: `Retention`, lvlCompleto: `Full System`,
+        modPresencia: `Digital Presence`, modFunnels: `Automated Funnels`,
+        modAvatar: `Marketing — AI Avatar`, modGeo: `Marketing — Geo-Segmentation`,
+        modCompleto: `Full System (4 modules)`,
+        solvPresencia: `Bilingual site + Google Business + local SEO`,
+        solvFunnels: `Card-free checkout + basic CRM`,
+        solvAvatar: `Pillar content, avatar, Christmas campaign`,
+        solvGeo: `Neighborhood campaigns + leads report`,
+        scOutNote: `Explicitly out of this initial scope: custom AI garden-design engine, paid-media budget, on-site content production — quoted as separate line items.`,
+
+        dvEyebrow: `4.2 · Deliverables detail`,
+        dvH2: `Essential vs. Standard`,
+        nomA: `Naming note: BubbleMesh's `,
+        nomPiloto: `Pilot`,
+        nomB: ` tier is exclusive to Architect Jaime Lazza (Grupo Lazza) in the real-estate vertical — it is neither offered nor mentioned in this proposal. Central Rock & Mulch is presented at the `,
+        nomEsencial: `Essential`,
+        nomC: ` tier: more generous than the market Standard given its anchor-client role in the gardening/home & garden retail vertical, but without the unlimited terms reserved for the pilot.`,
+        thServicio: `Service`, thEsencial: `Essential (Central R&M)`, thEstandar: `Standard`,
+        notInc: `Not included`, monthly: `Monthly`,
+        svcWeb: `Website`, svcWebE: `1 bilingual site (EN/ES)`,
+        svcBrand: `AI Brandbook + Design.md`, svcBrandE: `Included, with one round of revisions`,
+        svcCamp: `Marketing campaign management`, svcCampS: `Google + 1 platform`,
+        svcStrat: `Digital marketing strategy`,
+        svcAvatar: `AI Avatar creation`,
+        svcChat: `AI Chatbot`, svcChatE: `Implementation + monthly optimization`, svcChatS: `Quarterly optimization (annual plan only)`,
+        svcContent: `Content package`, svcContentE: `4 posts/week (1 post, 1 video, 2 stories)`, svcContentS: `3 posts/week (1 post, 1 video, 1 story)`,
+        svcMvp: `Custom AI platform (MVP)`, svcMvpE: `Not included — garden-design engine quoted separately once scope is defined`,
+        svcDisc: `Discount with partner production houses`,
+        fnStrong: `Why the content package says 4 and not 6:`,
+        fnBody: ` the Bubble Prop reference table offers 6 posts/week at pilot tier because that client already has a resolved production mechanism. For Central Rock & Mulch that mechanism is still pending — promising 6 before solving it is the same mistake the client's previous agencies already made: content with nothing behind it.`,
+
+        buEyebrow: `Project budget`,
+        buH2: `Launch pricing`,
+        thMensualidad: `Monthly`, thConfig: `Initial setup`,
+        selLevel: `Selected level`, perMonth: `/mo`, setupWord: `setup`,
+        buNote: `*Geo-Segmentation does not include paid-media budget — defined separately. Anchor prices for the gardening retail vertical, calibrated to U.S. 2026 benchmarks. Figures shown in USD; switch to ES to see amounts in MXN at a reference rate of 20 MXN/USD.`,
+
+        coEyebrow: `Thank you`,
+        coH2: `Thank you for your trust and for sharing the full context of Central Rock & Mulch.`,
+        coP1: `The neighborhood map, the competitive analysis, the vision behind Captain Aggregates — this proposal is built on that, not on a generic package. We look forward to your feedback.`,
+        coP2: `This page is presentation material for Thursday's session — it does not replace the formal quote or the agreement, and the visual samples above are replaced with real photography once signed.`,
+        emilyRole: `Sr. Account Manager`,
+      },
     };
-    return levels[this.state.scope] || levels['Completo'];
+    return T[this.state.lang] || T.ES;
+  }
+
+  // Formatea un monto USD según la moneda ligada al idioma actual.
+  money(usd) {
+    const isEs = this.state.lang === 'ES';
+    const rate = 20; // 20 MXN/USD
+    const amount = isEs ? usd * rate : usd;
+    return '$' + amount.toLocaleString('en-US') + (isEs ? ' MXN' : ' USD');
+  }
+
+  scopeData() {
+    const isEs = this.state.lang === 'ES';
+    const levels = {
+      'Core': { labelEs: 'Core', labelEn: 'Core', monthly: 4200, setup: 10000, order: 1 },
+      'Expansión': { labelEs: 'Expansión', labelEn: 'Expansion', monthly: 6800, setup: 11500, order: 2 },
+      'Retención': { labelEs: 'Retención', labelEn: 'Retention', monthly: 8700, setup: 14500, order: 3 },
+      'Completo': { labelEs: 'Sistema Completo', labelEn: 'Full System', monthly: 7200, setup: 11000, order: 4 },
+    };
+    const lvl = levels[this.state.scope] || levels['Completo'];
+    return { ...lvl, label: isEs ? lvl.labelEs : lvl.labelEn };
   }
 
   renderVals() {
@@ -535,6 +796,16 @@ class Component extends DCLogic {
     const scope = this.state.scope;
     const scopeInfo = this.scopeData();
     const order = scopeInfo.order;
+    const d = this.dict();
+
+    const langBtnBase = {
+      border: 'none',
+      padding: '7px 14px',
+      cursor: 'pointer',
+      fontFamily: "'IBM Plex Mono', monospace",
+      fontSize: '11px',
+      fontWeight: 500,
+    };
 
     const pillBase = {
       border: 'none',
@@ -552,15 +823,6 @@ class Component extends DCLogic {
     const pillOn = (color) => ({ ...pillBase, background: color, color: '#F5F4F0' });
     const pillOff = { ...pillBase, background: 'rgba(11,11,11,0.06)', color: '#0B0B0B' };
 
-    const langBtnBase = {
-      border: 'none',
-      padding: '7px 14px',
-      cursor: 'pointer',
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: '11px',
-      fontWeight: 500,
-    };
-
     const rowExtra = (rowOrder) => (order >= rowOrder ? 'background:rgba(138,162,123,0.05);' : 'opacity:0.4;');
 
     const sY = this._reducedMotion ? 0 : this.state.scrollY;
@@ -570,6 +832,8 @@ class Component extends DCLogic {
     const parallaxLift = Math.min(sY * 0.18, 90);
 
     return {
+      d,
+
       registerHeroIcon: (el) => { this._heroIcon = el; },
       heroIconStyle: {
         width: '438px',
@@ -590,10 +854,11 @@ class Component extends DCLogic {
       // mockup content driven by lang
       mockLangEsStyle: { fontWeight: isEs ? 700 : 400, color: isEs ? '#0B0B0B' : 'rgba(11,11,11,0.4)' },
       mockLangEnStyle: { fontWeight: !isEs ? 700 : 400, color: !isEs ? '#0B0B0B' : 'rgba(11,11,11,0.4)' },
-      mockHeadline: isEs ? 'Grava #57 disponible hoy.' : 'BUILT TO LAST. GROWN TO THRIVE.',
+      mockHeadline: d.mockHeadline,
       mockHeadlineSize: isEs ? 22 : 26,
-      mockSubcopy: isEs ? '$45/yarda. Recoge en sucursal o pide entrega.' : "Not sure where to start? Upload a photo of your yard and we'll help you picture it.",
-      mockCta: isEs ? 'Cotizar por volumen' : 'Start your project',
+      mockSubcopy: d.mockSubcopy,
+      mockCta: d.mockCta,
+      mockPhoto: d.mockPhoto,
 
       // terrain dividers
       registerTerrain0: (el) => { this._t0 = el; },
@@ -619,8 +884,15 @@ class Component extends DCLogic {
       rowCompletoExtra: order === 4 ? 'background:rgba(184,106,87,0.06);' : 'opacity:0.55;',
 
       scopeLabel: scopeInfo.label,
-      scopeMonthlyLabel: '$' + scopeInfo.monthly.toLocaleString('en-US'),
-      scopeSetupLabel: '$' + scopeInfo.setup.toLocaleString('en-US'),
+      scopeMonthlyLabel: this.money(scopeInfo.monthly),
+      scopeSetupLabel: this.money(scopeInfo.setup),
+
+      // precios por módulo, moneda ligada al idioma (USD base, MXN = ×20)
+      p1m: this.money(1800), p1s: this.money(4500),
+      p2m: this.money(2400), p2s: this.money(5500),
+      p3m: this.money(2600), p3s: this.money(1500),
+      p4m: this.money(1900), p4s: this.money(3000),
+      pTm: this.money(7200), pTs: this.money(11000),
     };
   }
 }
