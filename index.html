@@ -158,25 +158,20 @@
     <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center; margin-bottom:88px;">
       <div style="display:flex; justify-content:center; order:1;">
         <div style="transform:scale(0.72); transform-origin:center;">
-          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="{{ d.iosPayTitle }}" hint-size="320,650">
-            <div style="padding:20px 16px; background:#F5F4F0; height:100%; box-sizing:border-box;">
-              <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:4px;">{{ d.iosPayHead }}</div>
-              <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:16px;">{{ d.iosPayOrder }}</div>
-              <div style="display:flex; flex-direction:column; gap:10px;">
-                <div style="background:#B86A57; color:#F5F4F0; border-radius:8px; padding:14px; box-shadow:0 4px 12px rgba(11,11,11,0.12);">
-                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">{{ d.iosOpt1 }}</div>
-                  <div style="font-size:10px; opacity:0.85; margin-top:3px;">{{ d.iosOpt1Sub }}</div>
-                </div>
-                <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); border-radius:8px; padding:14px;">
-                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">{{ d.iosOpt2 }}</div>
-                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">{{ d.iosOpt2Sub }}</div>
-                </div>
-                <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); border-radius:8px; padding:14px;">
-                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">{{ d.iosOpt3 }}</div>
-                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">{{ d.iosOpt3Sub }}</div>
-                </div>
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="{{ d.iosVizTitle }}" hint-size="320,650">
+            <div style="padding:18px 16px; background:#F5F4F0; height:100%; box-sizing:border-box; display:flex; flex-direction:column;">
+              <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:2px;">{{ d.iosVizHead }}</div>
+              <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:14px;">{{ d.iosVizSub }}</div>
+              <div style="aspect-ratio:4/3; border-radius:10px; background:linear-gradient(135deg,#8AA27B,#6B8159); position:relative; overflow:hidden; margin-bottom:12px; box-shadow:0 4px 12px rgba(11,11,11,0.12);">
+                <div style="position:absolute; inset:0; background:repeating-linear-gradient(135deg, rgba(245,244,240,0.16) 0px, rgba(245,244,240,0.16) 2px, transparent 2px, transparent 9px);"></div>
+                <div style="position:absolute; bottom:8px; left:8px; right:8px; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#F5F4F0; background:rgba(11,11,11,0.35); padding:5px 7px; border-radius:5px; white-space:pre-line;">{{ d.iosVizImg }}</div>
               </div>
-              <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">{{ d.iosPayFoot }}</div>
+              <div style="display:flex; gap:7px; margin-bottom:12px;">
+                <span style="flex:1; text-align:center; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:9px; padding:8px 4px; border-radius:6px;">{{ d.iosVizOpt1 }}</span>
+                <span style="flex:1; text-align:center; background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); color:rgba(11,11,11,0.6); font-family:'Archivo',sans-serif; font-weight:700; font-size:9px; padding:8px 4px; border-radius:6px;">{{ d.iosVizOpt2 }}</span>
+                <span style="flex:1; text-align:center; background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); color:rgba(11,11,11,0.6); font-family:'Archivo',sans-serif; font-weight:700; font-size:9px; padding:8px 4px; border-radius:6px;">{{ d.iosVizOpt3 }}</span>
+              </div>
+              <div style="margin-top:auto; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">{{ d.iosVizFoot }}</div>
             </div>
           </x-import>
         </div>
@@ -227,43 +222,18 @@
       </div>
     </div>
 
-    <!-- Navidad banner -->
-    <div style="background:#0B0B0B; border-radius:16px; padding:48px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-bottom:88px; overflow:hidden;">
+    <!-- Oferta por tiempo limitado -->
+    <div style="background:#0B0B0B; border-radius:16px; padding:48px; display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:center; overflow:hidden;">
       <div>
-        <span style="display:inline-block; background:rgba(201,154,62,0.18); color:#C99A3E; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.xmasBadge }}</span>
-        <h3 style="font-family:'Anton',sans-serif; font-size:30px; color:#F5F4F0; margin:0 0 14px;">{{ d.xmasH3 }}</h3>
-        <p style="font-size:15px; line-height:1.6; color:rgba(245,244,240,0.7); margin:0;">{{ d.xmasP }}</p>
+        <span style="display:inline-block; background:rgba(184,106,87,0.22); color:#E29B86; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.offerBadge }}</span>
+        <h3 style="font-family:'Anton',sans-serif; font-size:32px; color:#F5F4F0; margin:0 0 14px; line-height:1.1;">{{ d.offerH }}</h3>
+        <p style="font-size:15px; line-height:1.6; color:rgba(245,244,240,0.72); margin:0 0 18px; max-width:560px;">{{ d.offerP }}</p>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8AA27B;">{{ d.offerSlots }}</div>
       </div>
-      <div style="aspect-ratio:16/9; border-radius:8px; background:repeating-linear-gradient(135deg, rgba(201,154,62,0.25) 0px, rgba(201,154,62,0.25) 2px, rgba(245,244,240,0.06) 2px, rgba(245,244,240,0.06) 10px); display:flex; align-items:center; justify-content:center;">
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#C99A3E; text-align:center; white-space:pre-line;">{{ d.xmasPhoto }}</div>
-      </div>
-    </div>
-
-    <!-- 3.4 Geo-segmentación -->
-    <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center;">
-      <div style="order:1;">
-        <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:16px; padding:28px; box-shadow:0 4px 12px rgba(11,11,11,0.06);">
-          <svg width="100%" height="220" viewBox="0 0 320 220">
-            <circle cx="160" cy="110" r="86" fill="none" stroke="#7C85A3" stroke-width="2" stroke-dasharray="4 5"></circle>
-            <circle cx="118" cy="72" r="10" fill="#8AA27B"></circle>
-            <circle cx="205" cy="66" r="8" fill="#8AA27B"></circle>
-            <circle cx="96" cy="140" r="9" fill="#8AA27B"></circle>
-            <circle cx="222" cy="146" r="7" fill="#8AA27B"></circle>
-            <path d="M160 110 L160 90" stroke="#B86A57" stroke-width="2.5"></path>
-            <circle cx="160" cy="86" r="5" fill="#B86A57"></circle>
-            <text x="118" y="55" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">Heights</text>
-            <text x="205" y="52" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">River Oaks</text>
-            <text x="96" y="158" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">Montrose</text>
-            <text x="222" y="164" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">West U.</text>
-            <text x="160" y="200" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7C85A3">{{ d.geoLoop }}</text>
-          </svg>
-        </div>
-      </div>
-      <div style="order:2;">
-        <span style="display:inline-block; background:rgba(138,162,123,0.16); color:#6B8159; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">{{ d.geoBadge }}</span>
-        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">{{ d.geoH3 }}</h3>
-        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">{{ d.geoP1 }}</p>
-        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">{{ d.geoP2 }}</p>
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(245,244,240,0.05); border:1px solid rgba(245,244,240,0.12); border-radius:12px; padding:28px;">
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:rgba(245,244,240,0.5); margin-bottom:8px;">{{ d.offerFrom }}</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; color:rgba(245,244,240,0.5); text-decoration:line-through;">{{ pTs }}</div>
+        <div style="font-family:'Anton',sans-serif; font-size:52px; color:#8AA27B; line-height:1; margin-top:4px;">{{ d.freeTag }}</div>
       </div>
     </div>
   </section>
@@ -283,9 +253,9 @@
     </div>
 
     <div style="display:flex; justify-content:center; gap:10px; margin:32px 0 40px; flex-wrap:wrap;">
-      <button onclick="{{ setScopeCore }}" style="{{ scopeBtnCoreStyle }}">{{ d.lvlCore }}</button>
-      <button onclick="{{ setScopeExpansion }}" style="{{ scopeBtnExpansionStyle }}">{{ d.lvlExpansion }}</button>
-      <button onclick="{{ setScopeRetencion }}" style="{{ scopeBtnRetencionStyle }}">{{ d.lvlRetencion }}</button>
+      <button onclick="{{ setScopeCore }}" style="{{ scopeBtnCoreStyle }}">{{ d.lvlPresencia }}</button>
+      <button onclick="{{ setScopeExpansion }}" style="{{ scopeBtnExpansionStyle }}">{{ d.lvlApp }}</button>
+      <button onclick="{{ setScopeRetencion }}" style="{{ scopeBtnRetencionStyle }}">{{ d.lvlMarketing }}</button>
       <button onclick="{{ setScopeCompleto }}" style="{{ scopeBtnCompletoStyle }}">{{ d.lvlCompleto }}</button>
     </div>
 
@@ -293,25 +263,20 @@
       <div style="display:grid; grid-template-columns:1fr 220px 2fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
         <div>{{ d.thModulo }}</div><div>{{ d.thNivel }}</div><div>{{ d.thResuelve }}</div>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowPresenciaExtra }}">
         <div style="font-weight:600; font-size:15px;">{{ d.modPresencia }}</div>
-        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlCore }}</span></div>
+        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlPlataforma }}</span></div>
         <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvPresencia }}</div>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
-        <div style="font-weight:600; font-size:15px;">{{ d.modFunnels }}</div>
-        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlCore }}</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvFunnels }}</div>
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowAppExtra }}">
+        <div style="font-weight:600; font-size:15px;">{{ d.modApp }}</div>
+        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlPlataforma }}</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvApp }}</div>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowExpansionExtra }}">
-        <div style="font-weight:600; font-size:15px;">{{ d.modAvatar }}</div>
-        <div><span style="background:rgba(184,106,87,0.14); color:#B86A57; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlExpansion }}</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvAvatar }}</div>
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; align-items:center; {{ rowRetencionExtra }}">
-        <div style="font-weight:600; font-size:15px;">{{ d.modGeo }}</div>
-        <div><span style="background:rgba(138,162,123,0.16); color:#6B8159; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlRetencion }}</span></div>
-        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvGeo }}</div>
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; align-items:center; {{ rowMarketingExtra }}">
+        <div style="font-weight:600; font-size:15px;">{{ d.modMarketing }}</div>
+        <div><span style="background:rgba(138,162,123,0.16); color:#6B8159; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">{{ d.lvlServicio }}</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">{{ d.solvMarketing }}</div>
       </div>
     </div>
 
@@ -351,7 +316,7 @@
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
           <div style="font-size:14px;">{{ d.svcAvatar }}</div>
-          <div style="font-size:13px; font-weight:600;">1 (&quot;Captain Aggregates&quot;)</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcAvatarE }}</div>
           <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
@@ -374,14 +339,14 @@
           <div style="font-size:13px; font-weight:600;">1</div>
           <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
         </div>
-        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
           <div style="font-size:14px;">{{ d.svcMvp }}</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.svcMvpE }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcMvpE }}</div>
           <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
         </div>
         <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; align-items:center;">
           <div style="font-size:14px;">{{ d.svcDisc }}</div>
-          <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
+          <div style="font-size:13px; font-weight:600;">{{ d.svcDiscE }}</div>
           <div style="font-size:13px; color:rgba(11,11,11,0.4);">{{ d.notInc }}</div>
         </div>
       </div>
@@ -401,36 +366,31 @@
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
         <div>{{ d.thModulo }}</div><div style="text-align:right;">{{ d.thMensualidad }}</div><div style="text-align:right;">{{ d.thConfig }}</div>
       </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowPresenciaExtra }}">
         <div style="font-size:15px;">{{ d.modPresencia }}</div>
         <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p1m }}</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p1s }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;"><span style="text-decoration:line-through; opacity:0.45;">{{ p1s }}</span> <span style="color:#6B8159; font-weight:600;">{{ d.freeTag }}</span></div>
       </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
-        <div style="font-size:15px;">{{ d.modFunnels }}</div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowAppExtra }}">
+        <div style="font-size:15px;">{{ d.modApp }}</div>
         <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p2m }}</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p2s }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;"><span style="text-decoration:line-through; opacity:0.45;">{{ p2s }}</span> <span style="color:#6B8159; font-weight:600;">{{ d.freeTag }}</span></div>
       </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowExpansionExtra }}">
-        <div style="font-size:15px;">{{ d.modAvatar }}</div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowMarketingExtra }}">
+        <div style="font-size:15px;">{{ d.modMarketing }}</div>
         <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p3m }}</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p3s }}</div>
-      </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowRetencionExtra }}">
-        <div style="font-size:15px;">{{ d.modGeo }}</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p4m }}</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">{{ p4s }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12px; color:rgba(11,11,11,0.5);">{{ d.noSetup }}</div>
       </div>
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:22px 24px; align-items:center; {{ rowCompletoExtra }}">
         <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:16px;">{{ d.modCompleto }}</div>
         <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">{{ pTm }}</div>
-        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">{{ pTs }}</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:15px;"><span style="text-decoration:line-through; opacity:0.45;">{{ pTs }}</span> <span style="color:#6B8159; font-weight:700;">{{ d.freeTag }}</span></div>
       </div>
     </div>
 
     <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding:20px 24px; background:rgba(124,133,163,0.08); border-radius:8px;">
       <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.03em; color:#7C85A3;">{{ d.selLevel }}: {{ scopeLabel }}</div>
-      <div style="font-family:'IBM Plex Mono',monospace; font-size:16px;">{{ scopeMonthlyLabel }} {{ d.perMonth }} · {{ scopeSetupLabel }} {{ d.setupWord }}</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:16px;">{{ scopeMonthlyLabel }} {{ d.perMonth }} · {{ scopeImplLabel }}</div>
     </div>
     <p style="font-size:12px; color:rgba(11,11,11,0.45); margin:10px 0 0;">{{ d.buNote }}</p>
   </section>
@@ -542,14 +502,14 @@ class Component extends DCLogic {
         objMedibleText: `Pasar de crecimiento 100% orgánico a un sistema que sostenga el ritmo hacia $3.5–4M, con datos por colonia que alimenten la decisión de expansión o franquicia.`,
 
         propEyebrow: `Propuesta según necesidades`,
-        propH2: `Cuatro módulos, un mismo sistema`,
+        propH2: `Tres módulos, un mismo sistema`,
 
-        m1Badge: `Core · Resuelve necesidad #3`,
+        m1Badge: `Plataforma · Presencia`,
         m1H3: `Presencia Digital`,
-        m1P1: `Sitio bilingüe (EN/ES) con actualización ágil de precios — responde directo al dolor de la volatilidad por combustible — más Google Business Profile y SEO local por colonia.`,
+        m1P1: `Sitio web bilingüe (EN/ES) con rediseño de marca y Brandbook incluidos de arranque, más actualización ágil de precios — responde al dolor de la volatilidad por combustible — Google Business Profile y SEO local por colonia.`,
         m1Note: `Prueba el toggle EN/ES en el encabezado — el mockup a la derecha cambia de densidad según el idioma, tal como haría el sitio real.`,
         m1Bold: `Tu catálogo cambia con el precio del combustible. Tu web debería seguirle el paso.`,
-        m1P2: `El dolor que Alejandro mismo describió — tardan semanas en actualizar un precio — no se resuelve con un sitio bonito, se resuelve con un sitio que se edita tan rápido como cambia la realidad de la yarda. Entregables mensuales de este módulo:`,
+        m1P2: `El dolor que Alejandro mismo describió — tardan semanas en actualizar un precio — no se resuelve con un sitio bonito, se resuelve con un sitio que se edita tan rápido como cambia la realidad de la yarda. La implementación incluye el rediseño de marca y el Brandbook. Entregables mensuales:`,
         m1Li1: `Actualización de catálogo y precios las veces que se necesite en el mes, no solo en el arranque`,
         m1Li2: `Reporte mensual de posicionamiento local (SEO) para las búsquedas clave por código postal`,
         m1Li3: `Un ciclo de ajuste a Google Business Profile — fotos, publicaciones, respuesta a reseñas`,
@@ -560,56 +520,51 @@ class Component extends DCLogic {
         mockCta: `Cotizar por volumen`,
         mockPhoto: `FOTO · jardín\nresidencial terminado`,
 
-        iosPayTitle: `Confirmar pedido`,
-        iosPayHead: `Elige cómo pagar`,
-        iosPayOrder: `Orden #4821 · $612.00`,
-        iosOpt1: `Transferencia (Zelle/ACH)`, iosOpt1Sub: `Referencia única al confirmar`,
-        iosOpt2: `Depósito bancario`, iosOpt2Sub: `Datos de cuenta + número de orden`,
-        iosOpt3: `Pago en sucursal`, iosOpt3Sub: `Agenda tu horario de recogida`,
-        iosPayFoot: `Sin campo de tarjeta en ningún punto del flujo`,
+        iosVizTitle: `Visualizador IA`,
+        iosVizHead: `Visualiza tu jardín`,
+        iosVizSub: `Sube una foto y prueba materiales`,
+        iosVizImg: `RENDER IA · tu jardín\ncon Grava #57`,
+        iosVizOpt1: `Grava #57`,
+        iosVizOpt2: `Mulch premium`,
+        iosVizOpt3: `Piedra decorativa`,
+        iosVizFoot: `Cada visualización se guarda en el CRM`,
 
-        m2Badge: `Core · Resuelve necesidad #4`,
-        m2H3: `Funnels Automatizados`,
-        m2P1: `"Arma tu pedido" con catálogo y carrito, pero el checkout se resuelve con transferencia, depósito o pago en sucursal — nunca pasarela de tarjeta. Responde directo al fraude ya sufrido vía Square.`,
-        m2P2: `Incluye CRM básico diferenciado por tipo de cliente y formulario de cotización con dos variantes (jardinero / DIY).`,
-        m2Bold: `Cada pedido armado en línea, sin pelear con una pasarela de tarjeta que ya les costó dinero.`,
-        m2P3: `El sistema no le pide a Central Rock & Mulch que cambie su política antifraude — la convierte en un flujo digital que la respeta. Entregables mensuales de este módulo:`,
-        m2Li1: `Reporte mensual de conversión, separado por tipo de cliente (jardinero recurrente vs. DIY de proyecto único) y por colonia`,
-        m2Li2: `Ajuste del flujo "arma tu pedido" según la fricción real detectada en el mes`,
-        m2Li3: `Mantenimiento del CRM y de las plantillas de seguimiento post-consulta`,
-        m2Li4: `Ajuste del formulario de cotización según lo que más se esté pidiendo`,
+        m2Badge: `Plataforma · Aplicación IA`,
+        m2H3: `Aplicación Web con IA`,
+        m2P1: `Le damos superpoderes a la web: un visualizador con IA donde el cliente sube una foto de su casa o jardín y prueba distintas decoraciones — grava, mulch, piedra — antes de comprar. Todo conectado a un CRM que registra cada interacción.`,
+        m2P2: `Incluye "arma tu pedido" con checkout sin pasarela de tarjeta (transferencia, depósito o pago en sucursal), respetando la política antifraude tras el fraude vía Square, y el CRM diferenciado por tipo de cliente.`,
+        m2Bold: `El cliente ve su casa transformada antes de decidir, y cada visita queda en tu CRM.`,
+        m2P3: `Esta plataforma se cotiza como una implementación única — es lo que le da a Central Rock & Mulch algo que la competencia no tiene. Entregables:`,
+        m2Li1: `Visualizador con IA: subir foto y previsualizar materiales y decoraciones sobre la casa o jardín`,
+        m2Li2: `Flujo "arma tu pedido" con checkout sin tarjeta (transferencia, depósito o sucursal)`,
+        m2Li3: `CRM conectado que registra cada visualización, cotización y pedido por tipo de cliente`,
+        m2Li4: `Tablero de seguimiento para dar continuidad a cada lead sin perder contexto`,
 
-        m3Badge: `Expansión · Resuelve necesidad #5, #9`,
-        m3H3: `Marketing con Avatar IA`,
-        m3P1: `"Captain Aggregates" como territorio de marca recurrente, con pilares de contenido diferenciados por buyer persona en 2 plataformas — no publicaciones sueltas, cada pieza con un porqué documentado.`,
-        m3P2: `Incluye el sprint de campaña navideña con fecha fija (preparación desde octubre).`,
+        m3Badge: `Servicio · Crecimiento`,
+        m3H3: `Marketing Digital`,
+        m3P1: `Paquete completo de crecimiento: 6 publicaciones/semana (2 posts, 2 videos, 2 stories), gestión de campañas en Google + 1 plataforma con geo-segmentación por colonia, y estrategia de marketing digital al mes — más 2 avatares de IA y chatbot.`,
+        m3P2: `Arranca con un levantamiento de contenido profesional: fotos para los avatares, del negocio y de las personas clave. Si la estrategia pide contenido de video mensual, se suma una productora aliada para grabarlo (marcado dentro de la estrategia). Incluye Community Manager y Account Manager.`,
         igCaption: `ilustración · Captain Aggregates en acción`,
         igPost: `Nuevo envío de piedra decorativa ya disponible 💪🪨`,
 
-        xmasBadge: `Sprint estacional · Resuelve necesidad #8`,
-        xmasH3: `Campaña de árboles de Navidad`,
-        xmasP: `La experiencia navideña con chocolate, música y árboles montados es el activo de marca más fuerte que ya tienen — y el menos explotado en foto. Este año, campaña segmentada con fecha fija de preparación desde octubre.`,
-        xmasPhoto: `FOTO · lote de árboles,\nfamilias con chocolate caliente`,
-
-        geoLoop: `circuito 610`,
-        geoBadge: `Retención · Resuelve necesidad #6`,
-        geoH3: `Geo-Segmentación por Colonia`,
-        geoP1: `Campañas dirigidas por código postal hacia las colonias de mayor potencial y menor competencia B2C — el mismo vacío que la competencia (Zarza, San Jacinto, Cowboy) ya deja abierto y hoy no se explota.`,
-        geoP2: `Reporte de leads por colonia, el mismo dato que alimenta la decisión de dónde abrir la siguiente sucursal.`,
+        offerBadge: `Oferta por tiempo limitado`,
+        offerH: `Primeros 5 clientes: implementación gratis`,
+        offerP: `Estamos regalando el costo de implementación a los primeros 5 clientes que firmen una colaboración de 1 año. Pagas solo la mensualidad y arrancamos comprometidos con el crecimiento de tu empresa. Central Rock & Mulch puede ser uno de esos primeros cinco.`,
+        offerFrom: `Implementación`,
+        offerSlots: `Cupo limitado · 5 clientes`,
 
         scEyebrow: `4.1 · Alcance del proyecto`,
         scH2: `Menú modular, no paquete único`,
-        scSub: `Entra con un compromiso menor y escala. Usa los botones para ver qué incluye cada nivel.`,
-        thModulo: `Módulo`, thNivel: `Nivel`, thResuelve: `Resuelve`,
-        lvlCore: `Core`, lvlExpansion: `Expansión`, lvlRetencion: `Retención`, lvlCompleto: `Sistema Completo`,
-        modPresencia: `Presencia Digital`, modFunnels: `Funnels Automatizados`,
-        modAvatar: `Marketing — Avatar IA`, modGeo: `Marketing — Geo-Segmentación`,
-        modCompleto: `Sistema Completo (4 módulos)`,
-        solvPresencia: `Sitio bilingüe + Google Business + SEO local`,
-        solvFunnels: `Checkout sin tarjeta + CRM básico`,
-        solvAvatar: `Contenido por pilares, avatar, campaña de Navidad`,
-        solvGeo: `Campañas por colonia + reporte de leads`,
-        scOutNote: `Explícitamente fuera de este alcance inicial: motor de IA de diseño de jardines a la medida, presupuesto de medios pagados, producción de contenido en sitio — se cotizan como líneas separadas.`,
+        scSub: `Entra con un compromiso menor y escala. Usa los botones para ver qué incluye cada módulo.`,
+        thModulo: `Módulo`, thNivel: `Tipo`, thResuelve: `Resuelve`,
+        lvlPresencia: `Presencia Digital`, lvlApp: `Aplicación Web IA`, lvlMarketing: `Marketing Digital`, lvlCompleto: `Sistema Completo`,
+        lvlPlataforma: `Plataforma`, lvlServicio: `Servicio`,
+        modPresencia: `Presencia Digital`, modApp: `Aplicación Web con IA`,
+        modMarketing: `Marketing Digital`, modCompleto: `Sistema Completo (3 módulos)`,
+        solvPresencia: `Web bilingüe + rediseño de marca + Brandbook + Google Business + SEO local`,
+        solvApp: `Visualizador de casas con IA + checkout sin tarjeta + CRM conectado`,
+        solvMarketing: `Contenido 6/sem + campañas Google+plataforma (geo por colonia) + 2 avatares + chatbot`,
+        scOutNote: `Fuera de este alcance inicial: presupuesto de medios pagados y producción de video mensual — si la estrategia lo pide, se suma una productora aliada con tarifa preferente. Se cotizan por separado.`,
 
         dvEyebrow: `4.2 · Detalle de entregables`,
         dvH2: `Esencial vs. Estándar`,
@@ -621,22 +576,23 @@ class Component extends DCLogic {
         thServicio: `Servicio`, thEsencial: `Esencial (Central R&M)`, thEstandar: `Estándar`,
         notInc: `No incluido`, monthly: `Mensual`,
         svcWeb: `Página web`, svcWebE: `1 sitio bilingüe (EN/ES)`,
-        svcBrand: `Brandbook IA + Design.md`, svcBrandE: `Incluido, con una ronda de ajustes`,
+        svcBrand: `Rediseño de marca + Brandbook`, svcBrandE: `Incluido, con una ronda de ajustes`,
         svcCamp: `Gestión de campañas de marketing`, svcCampS: `Google + 1 plataforma`,
         svcStrat: `Estrategia de marketing digital`,
-        svcAvatar: `Creación de Avatar de IA`,
+        svcAvatar: `Avatares de IA`, svcAvatarE: `2 (Captain Aggregates + 1)`,
         svcChat: `Chatbot IA`, svcChatE: `Implementación + optimización mensual`, svcChatS: `Optimización trimestral (solo plan anual)`,
-        svcContent: `Paquete de contenido`, svcContentE: `4 publicaciones/semana (1 post, 1 video, 2 stories)`, svcContentS: `3 publicaciones/semana (1 post, 1 video, 1 story)`,
-        svcMvp: `Plataforma a la medida con IA (MVP)`, svcMvpE: `No incluido — motor de diseño de jardines se cotiza aparte una vez definido el alcance`,
-        svcDisc: `Descuento con productoras aliadas`,
-        fnStrong: `Por qué el paquete de contenido dice 4 y no 6:`,
-        fnBody: ` la tabla de referencia de Bubble Prop ofrece 6 publicaciones/semana a nivel piloto porque ese cliente ya tiene un mecanismo de producción resuelto. Para Central Rock & Mulch ese mecanismo todavía está pendiente — prometer 6 antes de resolverlo es el mismo error que ya cometieron las agencias anteriores del cliente: contenido sin sustento detrás.`,
+        svcContent: `Paquete de contenido`, svcContentE: `6 publicaciones/semana (2 posts, 2 videos, 2 stories)`, svcContentS: `3 publicaciones/semana (1 post, 1 video, 1 story)`,
+        svcMvp: `Aplicación web con IA (visualizador)`, svcMvpE: `Incluido — visualizador de casas + CRM`,
+        svcDisc: `Productora aliada para video mensual`, svcDiscE: `Tarifa preferente (opcional, según estrategia)`,
+        fnStrong: `Sobre el contenido y el video:`,
+        fnBody: ` el arranque incluye un levantamiento profesional de fotos (avatares, negocio y personas clave). El paquete de 6/semana se produce a partir de ese material; si la estrategia define video mensual recurrente, se suma una productora aliada para grabarlo — con tarifa preferente — y se cotiza aparte.`,
 
         buEyebrow: `Presupuesto del proyecto`,
-        buH2: `Precios de lanzamiento`,
-        thMensualidad: `Mensualidad`, thConfig: `Configuración inicial`,
-        selLevel: `Nivel seleccionado`, perMonth: `/mes`, setupWord: `inicial`,
-        buNote: `*Geo-Segmentación no incluye presupuesto de medios pagados — se define aparte. Precios ancla del vertical retail de jardinería, calibrados a benchmarks de EE.UU. 2026. Cifras en MXN convertidas a un tipo de cambio referencial de 20 MXN/USD; cambia a EN para ver los montos en USD.`,
+        buH2: `Inversión mensual`,
+        thMensualidad: `Mensualidad`, thConfig: `Implementación`,
+        selLevel: `Selección`, perMonth: `/mes`, setupWord: `implementación`,
+        freeTag: `GRATIS`, noSetup: `Sin implementación`, freeSummary: `implementación GRATIS (primeros 5)`,
+        buNote: `*Solo las plataformas (Presencia Digital y Aplicación Web con IA) tienen implementación; Marketing Digital es mensual sin implementación. Implementación condonada para los primeros 5 clientes con colaboración de 1 año. Cifras en MXN a tipo de cambio referencial de 20 MXN/USD; cambia a EN para verlas en USD.`,
 
         coEyebrow: `Gracias`,
         coH2: `Gracias por la confianza y por compartir el contexto completo de Central Rock & Mulch.`,
@@ -664,14 +620,14 @@ class Component extends DCLogic {
         objMedibleText: `Move from 100% organic growth to a system that sustains the pace toward $3.5–4M, with neighborhood-level data that feeds the expansion or franchise decision.`,
 
         propEyebrow: `Proposal by needs`,
-        propH2: `Four modules, one system`,
+        propH2: `Three modules, one system`,
 
-        m1Badge: `Core · Solves need #3`,
+        m1Badge: `Platform · Presence`,
         m1H3: `Digital Presence`,
-        m1P1: `Bilingual site (EN/ES) with agile price updates — a direct answer to fuel-driven volatility — plus Google Business Profile and local SEO by neighborhood.`,
+        m1P1: `Bilingual website (EN/ES) with brand redesign and Brandbook included at kickoff, plus agile price updates — an answer to fuel-driven volatility — Google Business Profile and local SEO by neighborhood.`,
         m1Note: `Try the EN/ES toggle in the header — the mockup on the right shifts density based on the language, just like the real site would.`,
         m1Bold: `Your catalog changes with the price of fuel. Your website should keep up.`,
-        m1P2: `The pain Alejandro described himself — it takes them weeks to update a price — isn't solved with a pretty site, it's solved with a site that edits as fast as the reality of the yard changes. Monthly deliverables for this module:`,
+        m1P2: `The pain Alejandro described himself — it takes them weeks to update a price — isn't solved with a pretty site, it's solved with a site that edits as fast as the reality of the yard changes. The implementation includes the brand redesign and the Brandbook. Monthly deliverables:`,
         m1Li1: `Catalog and price updates as often as needed during the month, not just at launch`,
         m1Li2: `Monthly local positioning (SEO) report for key searches by ZIP code`,
         m1Li3: `One Google Business Profile tuning cycle — photos, posts, review responses`,
@@ -682,56 +638,51 @@ class Component extends DCLogic {
         mockCta: `Start your project`,
         mockPhoto: `PHOTO · finished\nresidential garden`,
 
-        iosPayTitle: `Confirm order`,
-        iosPayHead: `Choose how to pay`,
-        iosPayOrder: `Order #4821 · $612.00`,
-        iosOpt1: `Transfer (Zelle/ACH)`, iosOpt1Sub: `Unique reference on confirmation`,
-        iosOpt2: `Bank deposit`, iosOpt2Sub: `Account details + order number`,
-        iosOpt3: `Pay in store`, iosOpt3Sub: `Schedule your pickup time`,
-        iosPayFoot: `No card field at any point in the flow`,
+        iosVizTitle: `AI Visualizer`,
+        iosVizHead: `Visualize your yard`,
+        iosVizSub: `Upload a photo and try materials`,
+        iosVizImg: `AI RENDER · your yard\nwith Gravel #57`,
+        iosVizOpt1: `Gravel #57`,
+        iosVizOpt2: `Premium mulch`,
+        iosVizOpt3: `Decorative stone`,
+        iosVizFoot: `Every visualization is saved to the CRM`,
 
-        m2Badge: `Core · Solves need #4`,
-        m2H3: `Automated Funnels`,
-        m2P1: `"Build your order" with catalog and cart, but checkout is settled by transfer, deposit, or in-store payment — never a card gateway. A direct answer to the fraud already suffered via Square.`,
-        m2P2: `Includes a basic CRM differentiated by client type and a quote form with two variants (landscaper / DIY).`,
-        m2Bold: `Every order built online, without fighting a card gateway that already cost them money.`,
-        m2P3: `The system doesn't ask Central Rock & Mulch to change its anti-fraud policy — it turns it into a digital flow that respects it. Monthly deliverables for this module:`,
-        m2Li1: `Monthly conversion report, split by client type (recurring landscaper vs. one-off DIY project) and by neighborhood`,
-        m2Li2: `Tuning of the "build your order" flow based on the real friction detected during the month`,
-        m2Li3: `Maintenance of the CRM and the post-inquiry follow-up templates`,
-        m2Li4: `Adjustment of the quote form based on what's being requested most`,
+        m2Badge: `Platform · AI App`,
+        m2H3: `AI Web App`,
+        m2P1: `We give the website superpowers: an AI visualizer where the customer uploads a photo of their house or yard and tries different decorations — gravel, mulch, stone — before buying. All connected to a CRM that logs every interaction.`,
+        m2P2: `Includes "build your order" with card-gateway-free checkout (transfer, deposit or in-store payment), respecting the anti-fraud policy after the Square fraud, and a CRM differentiated by client type.`,
+        m2Bold: `Customers see their home transformed before deciding, and every visit lands in your CRM.`,
+        m2P3: `This platform is quoted as a one-time implementation — it's what gives Central Rock & Mulch something competitors don't have. Deliverables:`,
+        m2Li1: `AI visualizer: upload a photo and preview materials and decorations on the house or yard`,
+        m2Li2: `"Build your order" flow with card-free checkout (transfer, deposit or in-store)`,
+        m2Li3: `Connected CRM that logs every visualization, quote and order by client type`,
+        m2Li4: `Tracking board to follow up on every lead without losing context`,
 
-        m3Badge: `Expansion · Solves need #5, #9`,
-        m3H3: `Marketing with AI Avatar`,
-        m3P1: `"Captain Aggregates" as a recurring brand territory, with content pillars differentiated by buyer persona across 2 platforms — not one-off posts, each piece with a documented reason.`,
-        m3P2: `Includes the Christmas campaign sprint with a fixed date (prep starting in October).`,
+        m3Badge: `Service · Growth`,
+        m3H3: `Digital Marketing`,
+        m3P1: `Full growth package: 6 posts/week (2 posts, 2 videos, 2 stories), campaign management on Google + 1 platform with neighborhood geo-segmentation, and a monthly digital marketing strategy — plus 2 AI avatars and a chatbot.`,
+        m3P2: `Kicks off with a professional content capture: photos for the avatars, the business, and key people. If the strategy calls for monthly video content, a partner production house is added to shoot it (flagged within the strategy). Includes a Community Manager and Account Manager.`,
         igCaption: `illustration · Captain Aggregates in action`,
         igPost: `New decorative stone shipment now available 💪🪨`,
 
-        xmasBadge: `Seasonal sprint · Solves need #8`,
-        xmasH3: `Christmas tree campaign`,
-        xmasP: `The Christmas experience with hot chocolate, music, and set-up trees is the strongest brand asset they already have — and the least exploited in photography. This year, a segmented campaign with a fixed prep date starting in October.`,
-        xmasPhoto: `PHOTO · tree lot,\nfamilies with hot chocolate`,
-
-        geoLoop: `Loop 610`,
-        geoBadge: `Retention · Solves need #6`,
-        geoH3: `Geo-Segmentation by Neighborhood`,
-        geoP1: `Campaigns targeted by ZIP code toward the neighborhoods with the highest potential and lowest B2C competition — the same gap competitors (Zarza, San Jacinto, Cowboy) already leave open and that goes unexploited today.`,
-        geoP2: `Leads report by neighborhood, the same data that feeds the decision of where to open the next branch.`,
+        offerBadge: `Limited-time offer`,
+        offerH: `First 5 clients: free implementation`,
+        offerP: `We're waiving the implementation cost for the first 5 clients who sign a 1-year collaboration. You pay only the monthly fee and we start out committed to your company's growth. Central Rock & Mulch can be one of those first five.`,
+        offerFrom: `Implementation`,
+        offerSlots: `Limited slots · 5 clients`,
 
         scEyebrow: `4.1 · Project scope`,
         scH2: `Modular menu, not a single package`,
-        scSub: `Start with a smaller commitment and scale. Use the buttons to see what each level includes.`,
-        thModulo: `Module`, thNivel: `Level`, thResuelve: `Solves`,
-        lvlCore: `Core`, lvlExpansion: `Expansion`, lvlRetencion: `Retention`, lvlCompleto: `Full System`,
-        modPresencia: `Digital Presence`, modFunnels: `Automated Funnels`,
-        modAvatar: `Marketing — AI Avatar`, modGeo: `Marketing — Geo-Segmentation`,
-        modCompleto: `Full System (4 modules)`,
-        solvPresencia: `Bilingual site + Google Business + local SEO`,
-        solvFunnels: `Card-free checkout + basic CRM`,
-        solvAvatar: `Pillar content, avatar, Christmas campaign`,
-        solvGeo: `Neighborhood campaigns + leads report`,
-        scOutNote: `Explicitly out of this initial scope: custom AI garden-design engine, paid-media budget, on-site content production — quoted as separate line items.`,
+        scSub: `Start with a smaller commitment and scale. Use the buttons to see what each module includes.`,
+        thModulo: `Module`, thNivel: `Type`, thResuelve: `Solves`,
+        lvlPresencia: `Digital Presence`, lvlApp: `AI Web App`, lvlMarketing: `Digital Marketing`, lvlCompleto: `Full System`,
+        lvlPlataforma: `Platform`, lvlServicio: `Service`,
+        modPresencia: `Digital Presence`, modApp: `AI Web App`,
+        modMarketing: `Digital Marketing`, modCompleto: `Full System (3 modules)`,
+        solvPresencia: `Bilingual web + brand redesign + Brandbook + Google Business + local SEO`,
+        solvApp: `AI home visualizer + card-free checkout + connected CRM`,
+        solvMarketing: `6/wk content + Google+platform campaigns (neighborhood geo) + 2 avatars + chatbot`,
+        scOutNote: `Out of this initial scope: paid-media budget and monthly video production — if the strategy calls for it, a partner production house is added at a preferred rate. Quoted separately.`,
 
         dvEyebrow: `4.2 · Deliverables detail`,
         dvH2: `Essential vs. Standard`,
@@ -743,22 +694,23 @@ class Component extends DCLogic {
         thServicio: `Service`, thEsencial: `Essential (Central R&M)`, thEstandar: `Standard`,
         notInc: `Not included`, monthly: `Monthly`,
         svcWeb: `Website`, svcWebE: `1 bilingual site (EN/ES)`,
-        svcBrand: `AI Brandbook + Design.md`, svcBrandE: `Included, with one round of revisions`,
+        svcBrand: `Brand redesign + Brandbook`, svcBrandE: `Included, with one round of revisions`,
         svcCamp: `Marketing campaign management`, svcCampS: `Google + 1 platform`,
         svcStrat: `Digital marketing strategy`,
-        svcAvatar: `AI Avatar creation`,
+        svcAvatar: `AI Avatars`, svcAvatarE: `2 (Captain Aggregates + 1)`,
         svcChat: `AI Chatbot`, svcChatE: `Implementation + monthly optimization`, svcChatS: `Quarterly optimization (annual plan only)`,
-        svcContent: `Content package`, svcContentE: `4 posts/week (1 post, 1 video, 2 stories)`, svcContentS: `3 posts/week (1 post, 1 video, 1 story)`,
-        svcMvp: `Custom AI platform (MVP)`, svcMvpE: `Not included — garden-design engine quoted separately once scope is defined`,
-        svcDisc: `Discount with partner production houses`,
-        fnStrong: `Why the content package says 4 and not 6:`,
-        fnBody: ` the Bubble Prop reference table offers 6 posts/week at pilot tier because that client already has a resolved production mechanism. For Central Rock & Mulch that mechanism is still pending — promising 6 before solving it is the same mistake the client's previous agencies already made: content with nothing behind it.`,
+        svcContent: `Content package`, svcContentE: `6 posts/week (2 posts, 2 videos, 2 stories)`, svcContentS: `3 posts/week (1 post, 1 video, 1 story)`,
+        svcMvp: `AI web app (visualizer)`, svcMvpE: `Included — home visualizer + CRM`,
+        svcDisc: `Partner production house for monthly video`, svcDiscE: `Preferred rate (optional, per strategy)`,
+        fnStrong: `About content and video:`,
+        fnBody: ` the kickoff includes a professional photo capture (avatars, business, and key people). The 6/week package is produced from that material; if the strategy defines recurring monthly video, a partner production house is added to shoot it — at a preferred rate — quoted separately.`,
 
         buEyebrow: `Project budget`,
-        buH2: `Launch pricing`,
-        thMensualidad: `Monthly`, thConfig: `Initial setup`,
-        selLevel: `Selected level`, perMonth: `/mo`, setupWord: `setup`,
-        buNote: `*Geo-Segmentation does not include paid-media budget — defined separately. Anchor prices for the gardening retail vertical, calibrated to U.S. 2026 benchmarks. Figures shown in USD; switch to ES to see amounts in MXN at a reference rate of 20 MXN/USD.`,
+        buH2: `Monthly investment`,
+        thMensualidad: `Monthly`, thConfig: `Implementation`,
+        selLevel: `Selection`, perMonth: `/mo`, setupWord: `implementation`,
+        freeTag: `FREE`, noSetup: `No setup`, freeSummary: `implementation FREE (first 5)`,
+        buNote: `*Only the platforms (Digital Presence and AI Web App) carry implementation; Digital Marketing is monthly with no setup. Implementation waived for the first 5 clients on a 1-year collaboration. Figures in MXN at a reference rate of 20 MXN/USD; switch to EN to see them in USD.`,
 
         coEyebrow: `Thank you`,
         coH2: `Thank you for your trust and for sharing the full context of Central Rock & Mulch.`,
@@ -781,10 +733,10 @@ class Component extends DCLogic {
   scopeData() {
     const isEs = this.state.lang === 'ES';
     const levels = {
-      'Core': { labelEs: 'Core', labelEn: 'Core', monthly: 4200, setup: 10000, order: 1 },
-      'Expansión': { labelEs: 'Expansión', labelEn: 'Expansion', monthly: 6800, setup: 11500, order: 2 },
-      'Retención': { labelEs: 'Retención', labelEn: 'Retention', monthly: 8700, setup: 14500, order: 3 },
-      'Completo': { labelEs: 'Sistema Completo', labelEn: 'Full System', monthly: 7200, setup: 11000, order: 4 },
+      'Presencia': { labelEs: 'Presencia Digital', labelEn: 'Digital Presence', monthly: 1800, setup: 4500 },
+      'AppIA': { labelEs: 'Aplicación Web con IA', labelEn: 'AI Web App', monthly: 2400, setup: 5500 },
+      'Marketing': { labelEs: 'Marketing Digital', labelEn: 'Digital Marketing', monthly: 4500, setup: 0 },
+      'Completo': { labelEs: 'Sistema Completo', labelEn: 'Full System', monthly: 8700, setup: 10000 },
     };
     const lvl = levels[this.state.scope] || levels['Completo'];
     return { ...lvl, label: isEs ? lvl.labelEs : lvl.labelEn };
@@ -823,7 +775,7 @@ class Component extends DCLogic {
     const pillOn = (color) => ({ ...pillBase, background: color, color: '#F5F4F0' });
     const pillOff = { ...pillBase, background: 'rgba(11,11,11,0.06)', color: '#0B0B0B' };
 
-    const rowExtra = (rowOrder) => (order >= rowOrder ? 'background:rgba(138,162,123,0.05);' : 'opacity:0.4;');
+    const rowOn = (mod) => (scope === 'Completo' || scope === mod ? 'background:rgba(138,162,123,0.05);' : 'opacity:0.4;');
 
     const sY = this._reducedMotion ? 0 : this.state.scrollY;
     const wiggleRotate = Math.sin(sY / 90) * 10;
@@ -868,31 +820,32 @@ class Component extends DCLogic {
       terrain0StrokeWidth: this.state.terrain0Active ? 2.4 : 1.4,
       terrain1StrokeWidth: this.state.terrain1Active ? 2.4 : 1.4,
 
-      // scope selector
-      setScopeCore: () => this.setState({ scope: 'Core' }),
-      setScopeExpansion: () => this.setState({ scope: 'Expansión' }),
-      setScopeRetencion: () => this.setState({ scope: 'Retención' }),
+      // scope selector — 3 módulos + sistema completo
+      setScopeCore: () => this.setState({ scope: 'Presencia' }),
+      setScopeExpansion: () => this.setState({ scope: 'AppIA' }),
+      setScopeRetencion: () => this.setState({ scope: 'Marketing' }),
       setScopeCompleto: () => this.setState({ scope: 'Completo' }),
-      scopeBtnCoreStyle: scope === 'Core' ? pillOn('#7C85A3') : pillOff,
-      scopeBtnExpansionStyle: scope === 'Expansión' ? pillOn('#B86A57') : pillOff,
-      scopeBtnRetencionStyle: scope === 'Retención' ? pillOn('#8AA27B') : pillOff,
+      scopeBtnCoreStyle: scope === 'Presencia' ? pillOn('#7C85A3') : pillOff,
+      scopeBtnExpansionStyle: scope === 'AppIA' ? pillOn('#B86A57') : pillOff,
+      scopeBtnRetencionStyle: scope === 'Marketing' ? pillOn('#8AA27B') : pillOff,
       scopeBtnCompletoStyle: scope === 'Completo' ? pillOn('#0B0B0B') : pillOff,
 
-      rowCoreExtra: rowExtra(1),
-      rowExpansionExtra: rowExtra(2),
-      rowRetencionExtra: rowExtra(3),
-      rowCompletoExtra: order === 4 ? 'background:rgba(184,106,87,0.06);' : 'opacity:0.55;',
+      rowPresenciaExtra: rowOn('Presencia'),
+      rowAppExtra: rowOn('AppIA'),
+      rowMarketingExtra: rowOn('Marketing'),
+      rowCompletoExtra: scope === 'Completo' ? 'background:rgba(184,106,87,0.06);' : 'opacity:0.55;',
 
       scopeLabel: scopeInfo.label,
       scopeMonthlyLabel: this.money(scopeInfo.monthly),
       scopeSetupLabel: this.money(scopeInfo.setup),
+      // implementación: gratis para primeros 5, o sin implementación en Marketing
+      scopeImplLabel: scopeInfo.setup === 0 ? d.noSetup : d.freeSummary,
 
       // precios por módulo, moneda ligada al idioma (USD base, MXN = ×20)
       p1m: this.money(1800), p1s: this.money(4500),
       p2m: this.money(2400), p2s: this.money(5500),
-      p3m: this.money(2600), p3s: this.money(1500),
-      p4m: this.money(1900), p4s: this.money(3000),
-      pTm: this.money(7200), pTs: this.money(11000),
+      p3m: this.money(4500),
+      pTm: this.money(8700), pTs: this.money(10000),
     };
   }
 }
