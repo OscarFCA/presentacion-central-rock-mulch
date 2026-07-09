@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wght@600;700;900&amp;family=Work+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F5F4F0; font-family: 'Work Sans', -apple-system, 'Segoe UI', sans-serif; }
+  a { color: #8AA27B; text-decoration: none; }
+  a:hover { color: #6B8159; text-decoration: underline; }
+  ::selection { background: #B86A57; color: #F5F4F0; }
+  @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+</style>
+<script component-from-global-scope="ChromeWindow" from="./browser-window.jsx"></script>
+</helmet>
+
+<div style="background:#F5F4F0; color:#0B0B0B;">
+
+  <!-- ============ HEADER ============ -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; height:72px; background:rgba(245,244,240,0.92); backdrop-filter:blur(8px); border-bottom:1px solid rgba(11,11,11,0.10); display:flex; align-items:center; justify-content:space-between; padding:0 64px;">
+    <div style="display:flex; align-items:center;">
+      <img src="assets/logo-central-rock-mulch.png" alt="Central Rock &amp; Mulch" style="height: 105px; width: 186px; display: block">
+    </div>
+
+    <nav style="display:flex; align-items:center; gap:28px; font-size:13px; font-weight:500;">
+      <a href="#objetivo" style="color:#0B0B0B;">Objetivo</a>
+      <a href="#propuesta" style="color:#0B0B0B;">Propuesta</a>
+      <a href="#alcance" style="color:#0B0B0B;">Alcance</a>
+      <a href="#presupuesto" style="color:#0B0B0B;">Presupuesto</a>
+      <a href="#contacto" style="color:#0B0B0B;">Contacto</a>
+    </nav>
+
+    <div style="display:flex; align-items:center; gap:16px;">
+      <div style="display:flex; border:1px solid rgba(11,11,11,0.2); border-radius:999px; overflow:hidden; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500;">
+        <button onclick="{{ setLangEs }}" style="{{ langBtnEsStyle }}">ES</button>
+        <button onclick="{{ setLangEn }}" style="{{ langBtnEnStyle }}">EN</button>
+      </div>
+      <a href="#contacto" style="background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.04em; text-transform:uppercase; padding:11px 20px; border-radius:8px;">Agendar convenio</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO / RESUMEN EJECUTIVO ============ -->
+
+  <section data-screen-label="Hero" style="position:relative; background:radial-gradient(ellipse 80% 60% at 82% 25%, rgba(138,162,123,0.16), transparent 65%), radial-gradient(ellipse 60% 50% at 5% 90%, rgba(184,106,87,0.08), transparent 70%); overflow:hidden;">
+    <div style="position:relative; padding:112px 64px 88px; max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.25fr 0.75fr; gap:40px; align-items:center;">
+      <div style="min-width:0; position:relative;">
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:24px;">Propuesta comercial · BubbleMesh × Central Rock &amp; Mulch</div>
+        <h1 style="font-family: 'Anton','Archivo Black',Impact,sans-serif; font-size: 62px; line-height: 1.18; letter-spacing: -0.01em; margin: 0 0 32px; max-width: 100%; width: 733px;">
+          De $1.1M a $3.5–4M.<br>Sin haber gastado un dólar en publicidad — todavía.
+        </h1><div style="box-sizing: border-box; display: flex; flex-direction: row; gap: 12px; width: 1210px; height: 296px; justify-content: flex-start; position: relative; align-items: center;"><p style="font-family: 'Work Sans',sans-serif; font-size: 19px; line-height: 1.6; color: rgba(11,11,11,0.65); max-width: 640px; margin: 0 0 40px;">
+          Central Rock &amp; Mulch factura $1.1M USD al año con una meta de $3.5–4M para habilitar expansión o franquicia, y lo ha logrado hasta hoy solo con posicionamiento orgánico en Google Maps. Esta propuesta traduce esa base orgánica en un sistema: presencia digital, marketing con estrategia sustentada y funnels automatizados que respetan cómo el negocio realmente opera.
+        </p><div style="display:flex; justify-content:center; align-items:center; position:relative;">
+
+
+        </div><img src="assets/icon-central-rock-mulch.png" alt="" ref="{{ registerHeroIcon }}" style="{{ heroIconStyle }}"><div style="position: absolute; width: 340px; height: 340px; border-radius: 999px; background: radial-gradient(circle, rgba(184,106,87,0.14), transparent 70%); left: 903px; top: -183px;"></div></div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:48px;">
+          <a href="#propuesta" style="background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px;">Ver la propuesta</a>
+          <a href="#presupuesto" style="border:1px solid #0B0B0B; color:#0B0B0B; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px;">Ir al presupuesto</a>
+        </div>
+        <div style="display:flex; gap:36px; flex-wrap:wrap; padding-top:32px; border-top:1px solid rgba(11,11,11,0.1);">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:500;">$1.1M</div>
+            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">Facturación anual actual</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:500; color:#B86A57;">$3.5–4M</div>
+            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">Meta para expansión / franquicia</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:26px; font-weight:500; color:#6B8159;">$0</div>
+            <div style="font-size:12px; color:rgba(11,11,11,0.55); margin-top:2px;">Invertido en publicidad paga</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><div ref="{{ registerTerrain0 }}" style="{{ terrain0WrapStyle }}">
+    <svg width="100%" height="48" viewBox="0 0 1280 48" preserveAspectRatio="none" style="display:block;">
+      <path d="M0 24 Q 320 4, 640 24 T 1280 24" stroke="#0B0B0B" stroke-opacity="0.12" stroke-width="{{ terrain0StrokeWidth }}" fill="none"></path>
+    </svg>
+  </div>
+
+  <!-- ============ OBJETIVO ============ -->
+  <section id="objetivo" data-screen-label="Objetivo" style="padding:72px 64px; max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1.6fr; gap:64px; align-items:start;">
+    <div>
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#8AA27B; margin-bottom:12px;">Objetivo del proyecto</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; line-height:1.1; margin:0;">Un sistema, dos compradores, cero fricción.</h2>
+    </div>
+    <div>
+      <p style="font-size:18px; line-height:1.6; color:rgba(11,11,11,0.75); margin:0 0 24px;">
+        Convertir la presencia digital de Central Rock &amp; Mulch en un sistema de crecimiento que hable a sus dos compradores reales — el jardinero profesional que necesita precio y disponibilidad en segundos, y el dueño de casa que necesita inspiración antes de decidir — sin duplicar el sitio en dos experiencias distintas, y sin forzar al negocio a adoptar herramientas que contradigan cómo ya opera.
+      </p>
+      <div style="display:flex; gap:16px; align-items:center; padding:20px 24px; background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; color:#7C85A3;">OBJETIVO MEDIBLE</div>
+        <div style="height:16px; width:1px; background:rgba(11,11,11,0.15);"></div>
+        <div style="font-size:15px; color:rgba(11,11,11,0.75);">Pasar de crecimiento 100% orgánico a un sistema que sostenga el ritmo hacia $3.5–4M, con datos por colonia que alimenten la decisión de expansión o franquicia.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROPUESTA SEGÚN NECESIDADES ============ -->
+  <section id="propuesta" data-screen-label="Propuesta" style="padding:24px 64px 96px; max-width:1280px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:64px;">
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:12px;">Propuesta según necesidades</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0;">Cuatro módulos, un mismo sistema</h2>
+    </div>
+
+    <!-- 3.1 Presencia Digital -->
+    <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center; margin-bottom:88px;">
+      <div>
+        <span style="display:inline-block; background:rgba(124,133,163,0.14); color:#7C85A3; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Core · Resuelve necesidad #3</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Presencia Digital</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 20px;">Sitio bilingüe (EN/ES) con actualización ágil de precios — responde directo al dolor de la volatilidad por combustible — más Google Business Profile y SEO local por colonia.</p>
+        <p style="font-size:13px; font-family:'IBM Plex Mono',monospace; color:#7C85A3; margin:0 0 24px;">Prueba el toggle EN/ES en el encabezado — el mockup a la derecha cambia de densidad según el idioma, tal como haría el sitio real.</p>
+        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; line-height:1.4; margin:0 0 10px;">Tu catálogo cambia con el precio del combustible. Tu web debería seguirle el paso.</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.65); margin:0 0 14px;">El dolor que Alejandro mismo describió — tardan semanas en actualizar un precio — no se resuelve con un sitio bonito, se resuelve con un sitio que se edita tan rápido como cambia la realidad de la yarda. Entregables mensuales de este módulo:</p>
+        <ul style="margin:0; padding:0 0 0 18px; font-size:14px; line-height:1.7; color:rgba(11,11,11,0.65);">
+          <li>Actualización de catálogo y precios las veces que se necesite en el mes, no solo en el arranque</li>
+          <li>Reporte mensual de posicionamiento local (SEO) para las búsquedas clave por código postal</li>
+          <li>Un ciclo de ajuste a Google Business Profile — fotos, publicaciones, respuesta a reseñas</li>
+          <li>Soporte técnico del sitio (corrección de errores, no proyectos nuevos — esos se cotizan aparte)</li>
+        </ul>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <div style="transform:scale(0.62); transform-origin:center;">
+          <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 900 }}" height="{{ 560 }}" url="centralrockandmulch.com" hint-size="560,350">
+            <div style="width:100%; height:100%; background:#F5F4F0; display:flex; flex-direction:column;">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 32px; border-bottom:1px solid rgba(11,11,11,0.08);">
+                <div style="font-family:'Anton',sans-serif; font-size:14px;">CENTRAL R&amp;M</div>
+                <div style="display:flex; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:10px;">
+                  <span style="{{ mockLangEsStyle }}">ES</span>
+                  <span style="{{ mockLangEnStyle }}">EN</span>
+                </div>
+              </div>
+              <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:0;">
+                <div style="padding:36px; display:flex; flex-direction:column; justify-content:center;">
+                  <div style="font-family:'Anton',sans-serif; font-size:{{ mockHeadlineSize }}px; line-height:1.05; margin-bottom:16px;">{{ mockHeadline }}</div>
+                  <div style="font-size:12px; color:rgba(11,11,11,0.6); margin-bottom:16px; line-height:1.5;">{{ mockSubcopy }}</div>
+                  <div style="display:inline-block; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.04em; text-transform:uppercase; padding:9px 16px; border-radius:6px; width:fit-content;">{{ mockCta }}</div>
+                </div>
+                <div style="background:repeating-linear-gradient(135deg, rgba(138,162,123,0.18) 0px, rgba(138,162,123,0.18) 2px, rgba(245,244,240,1) 2px, rgba(245,244,240,1) 10px); display:flex; align-items:center; justify-content:center;">
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B8159; text-align:center; padding:16px;">FOTO · jardín<br>residencial terminado</div>
+                </div>
+              </div>
+            </div>
+          </x-import>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.2 Funnels Automatizados -->
+    <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center; margin-bottom:88px;">
+      <div style="display:flex; justify-content:center; order:1;">
+        <div style="transform:scale(0.72); transform-origin:center;">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="Confirmar pedido" hint-size="320,650">
+            <div style="padding:20px 16px; background:#F5F4F0; height:100%; box-sizing:border-box;">
+              <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:14px; margin-bottom:4px;">Elige cómo pagar</div>
+              <div style="font-size:11px; color:rgba(11,11,11,0.55); margin-bottom:16px;">Orden #4821 · $612.00</div>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="background:#B86A57; color:#F5F4F0; border-radius:8px; padding:14px; box-shadow:0 4px 12px rgba(11,11,11,0.12);">
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">Transferencia (Zelle/ACH)</div>
+                  <div style="font-size:10px; opacity:0.85; margin-top:3px;">Referencia única al confirmar</div>
+                </div>
+                <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); border-radius:8px; padding:14px;">
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">Depósito bancario</div>
+                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">Datos de cuenta + número de orden</div>
+                </div>
+                <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.12); border-radius:8px; padding:14px;">
+                  <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;">Pago en sucursal</div>
+                  <div style="font-size:10px; color:rgba(11,11,11,0.55); margin-top:3px;">Agenda tu horario de recogida</div>
+                </div>
+              </div>
+              <div style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">Sin campo de tarjeta en ningún punto del flujo</div>
+            </div>
+          </x-import>
+        </div>
+      </div>
+      <div style="order:2;">
+        <span style="display:inline-block; background:rgba(124,133,163,0.14); color:#7C85A3; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Core · Resuelve necesidad #4</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Funnels Automatizados</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">"Arma tu pedido" con catálogo y carrito, pero el checkout se resuelve con transferencia, depósito o pago en sucursal — nunca pasarela de tarjeta. Responde directo al fraude ya sufrido vía Square.</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0 0 24px;">Incluye CRM básico diferenciado por tipo de cliente y formulario de cotización con dos variantes (jardinero / DIY).</p>
+        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; line-height:1.4; margin:0 0 10px;">Cada pedido armado en línea, sin pelear con una pasarela de tarjeta que ya les costó dinero.</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.65); margin:0 0 14px;">El sistema no le pide a Central Rock &amp; Mulch que cambie su política antifraude — la convierte en un flujo digital que la respeta. Entregables mensuales de este módulo:</p>
+        <ul style="margin:0; padding:0 0 0 18px; font-size:14px; line-height:1.7; color:rgba(11,11,11,0.65);">
+          <li>Reporte mensual de conversión, separado por tipo de cliente (jardinero recurrente vs. DIY de proyecto único) y por colonia</li>
+          <li>Ajuste del flujo "arma tu pedido" según la fricción real detectada en el mes</li>
+          <li>Mantenimiento del CRM y de las plantillas de seguimiento post-consulta</li>
+          <li>Ajuste del formulario de cotización según lo que más se esté pidiendo</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3.3 Marketing — Avatar IA -->
+    <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center; margin-bottom:56px;">
+      <div>
+        <span style="display:inline-block; background:rgba(184,106,87,0.14); color:#B86A57; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Expansión · Resuelve necesidad #5, #9</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Marketing con Avatar IA</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">"Captain Aggregates" como territorio de marca recurrente, con pilares de contenido diferenciados por buyer persona en 2 plataformas — no publicaciones sueltas, cada pieza con un porqué documentado.</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">Incluye el sprint de campaña navideña con fecha fija (preparación desde octubre).</p>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <div style="transform:scale(0.72); transform-origin:center;">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" title="Instagram" hint-size="320,650">
+            <div style="background:#fff; height:100%; box-sizing:border-box; display:flex; flex-direction:column;">
+              <div style="display:flex; align-items:center; gap:8px; padding:12px 14px; border-bottom:1px solid rgba(11,11,11,0.08);">
+                <div style="width:28px; height:28px; border-radius:999px; background:#B86A57;"></div>
+                <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px;">centralrockandmulch</div>
+              </div>
+              <div style="aspect-ratio:1/1; background:linear-gradient(135deg,#C99A3E,#B86A57); display:flex; align-items:center; justify-content:center; position:relative;">
+                <div style="width:70px; height:70px; border-radius:999px; background:#7C85A3; border:4px solid #F5F4F0;"></div>
+                <div style="position:absolute; bottom:8px; left:8px; right:8px; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#F5F4F0; background:rgba(11,11,11,0.35); padding:4px 6px; border-radius:4px;">ilustración · Captain Aggregates en acción</div>
+              </div>
+              <div style="padding:12px 14px; display:flex; gap:12px; font-size:16px;">
+                <span>♡</span><span>💬</span><span>↗</span>
+              </div>
+              <div style="padding:0 14px; font-size:11px; line-height:1.5;"><strong>centralrockandmulch</strong> Nuevo envío de piedra decorativa ya disponible 💪🪨</div>
+            </div>
+          </x-import>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navidad banner -->
+    <div style="background:#0B0B0B; border-radius:16px; padding:48px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-bottom:88px; overflow:hidden;">
+      <div>
+        <span style="display:inline-block; background:rgba(201,154,62,0.18); color:#C99A3E; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Sprint estacional · Resuelve necesidad #8</span>
+        <h3 style="font-family:'Anton',sans-serif; font-size:30px; color:#F5F4F0; margin:0 0 14px;">Campaña de árboles de Navidad</h3>
+        <p style="font-size:15px; line-height:1.6; color:rgba(245,244,240,0.7); margin:0;">La experiencia navideña con chocolate, música y árboles montados es el activo de marca más fuerte que ya tienen — y el menos explotado en foto. Este año, campaña segmentada con fecha fija de preparación desde octubre.</p>
+      </div>
+      <div style="aspect-ratio:16/9; border-radius:8px; background:repeating-linear-gradient(135deg, rgba(201,154,62,0.25) 0px, rgba(201,154,62,0.25) 2px, rgba(245,244,240,0.06) 2px, rgba(245,244,240,0.06) 10px); display:flex; align-items:center; justify-content:center;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#C99A3E; text-align:center;">FOTO · lote de árboles,<br>familias con chocolate caliente</div>
+      </div>
+    </div>
+
+    <!-- 3.4 Geo-segmentación -->
+    <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:center;">
+      <div style="order:1;">
+        <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:16px; padding:28px; box-shadow:0 4px 12px rgba(11,11,11,0.06);">
+          <svg width="100%" height="220" viewBox="0 0 320 220">
+            <circle cx="160" cy="110" r="86" fill="none" stroke="#7C85A3" stroke-width="2" stroke-dasharray="4 5"></circle>
+            <circle cx="118" cy="72" r="10" fill="#8AA27B"></circle>
+            <circle cx="205" cy="66" r="8" fill="#8AA27B"></circle>
+            <circle cx="96" cy="140" r="9" fill="#8AA27B"></circle>
+            <circle cx="222" cy="146" r="7" fill="#8AA27B"></circle>
+            <path d="M160 110 L160 90" stroke="#B86A57" stroke-width="2.5"></path>
+            <circle cx="160" cy="86" r="5" fill="#B86A57"></circle>
+            <text x="118" y="55" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">Heights</text>
+            <text x="205" y="52" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">River Oaks</text>
+            <text x="96" y="158" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">Montrose</text>
+            <text x="222" y="164" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0B0B0B">West U.</text>
+            <text x="160" y="200" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7C85A3">circuito 610</text>
+          </svg>
+        </div>
+      </div>
+      <div style="order:2;">
+        <span style="display:inline-block; background:rgba(138,162,123,0.16); color:#6B8159; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px;">Retención · Resuelve necesidad #6</span>
+        <h3 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:30px; margin:0 0 16px;">Geo-Segmentación por Colonia</h3>
+        <p style="font-size:16px; line-height:1.65; color:rgba(11,11,11,0.7); margin:0 0 12px;">Campañas dirigidas por código postal hacia las colonias de mayor potencial y menor competencia B2C — el mismo vacío que la competencia (Zarza, San Jacinto, Cowboy) ya deja abierto y hoy no se explota.</p>
+        <p style="font-size:14px; line-height:1.6; color:rgba(11,11,11,0.55); margin:0;">Reporte de leads por colonia, el mismo dato que alimenta la decisión de dónde abrir la siguiente sucursal.</p>
+      </div>
+    </div>
+  </section>
+
+  <div ref="{{ registerTerrain1 }}" style="{{ terrain1WrapStyle }}">
+    <svg width="100%" height="48" viewBox="0 0 1280 48" preserveAspectRatio="none" style="display:block;">
+      <path d="M0 24 Q 320 4, 640 24 T 1280 24" stroke="#0B0B0B" stroke-opacity="0.12" stroke-width="{{ terrain1StrokeWidth }}" fill="none"></path>
+    </svg>
+  </div>
+
+  <!-- ============ ALCANCE ============ -->
+  <section id="alcance" data-screen-label="Alcance" style="padding:88px 64px; max-width:1280px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:16px;">
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#7C85A3; margin-bottom:12px;">4.1 · Alcance del proyecto</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0 0 12px;">Menú modular, no paquete único</h2>
+      <p style="font-size:15px; color:rgba(11,11,11,0.6); max-width:560px; margin:0 auto;">Entra con un compromiso menor y escala. Usa los botones para ver qué incluye cada nivel.</p>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:10px; margin:32px 0 40px; flex-wrap:wrap;">
+      <button onclick="{{ setScopeCore }}" style="{{ scopeBtnCoreStyle }}">Core</button>
+      <button onclick="{{ setScopeExpansion }}" style="{{ scopeBtnExpansionStyle }}">Expansión</button>
+      <button onclick="{{ setScopeRetencion }}" style="{{ scopeBtnRetencionStyle }}">Retención</button>
+      <button onclick="{{ setScopeCompleto }}" style="{{ scopeBtnCompletoStyle }}">Sistema Completo</button>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
+        <div>Módulo</div><div>Nivel</div><div>Resuelve</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
+        <div style="font-weight:600; font-size:15px;">Presencia Digital</div>
+        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Core</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Sitio bilingüe + Google Business + SEO local</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
+        <div style="font-weight:600; font-size:15px;">Funnels Automatizados</div>
+        <div><span style="background:rgba(124,133,163,0.16); color:#7C85A3; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Core</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Checkout sin tarjeta + CRM básico</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowExpansionExtra }}">
+        <div style="font-weight:600; font-size:15px;">Marketing — Avatar IA</div>
+        <div><span style="background:rgba(184,106,87,0.14); color:#B86A57; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Expansión</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Contenido por pilares, avatar, campaña de Navidad</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 220px 2fr; padding:20px 24px; align-items:center; {{ rowRetencionExtra }}">
+        <div style="font-weight:600; font-size:15px;">Marketing — Geo-Segmentación</div>
+        <div><span style="background:rgba(138,162,123,0.16); color:#6B8159; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 10px; border-radius:999px;">Retención</span></div>
+        <div style="font-size:14px; color:rgba(11,11,11,0.65);">Campañas por colonia + reporte de leads</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px; color:rgba(11,11,11,0.5); margin:20px 0 0; max-width:760px;">Explícitamente fuera de este alcance inicial: motor de IA de diseño de jardines a la medida, presupuesto de medios pagados, producción de contenido en sitio — se cotizan como líneas separadas.</p>
+
+    <div style="margin-top:96px;">
+      <div style="text-align:center; margin-bottom:16px;">
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#7C85A3; margin-bottom:12px;">4.2 · Detalle de entregables</div>
+        <h2 style="font-family:'Anton',sans-serif; font-size:34px; margin:0 0 16px;">Esencial vs. Estándar</h2>
+      </div>
+
+      <p style="font-size:13px; line-height:1.6; color:rgba(11,11,11,0.55); max-width:820px; margin:0 auto 32px; text-align:center;">Nota de nomenclatura: el nivel <strong>Piloto</strong> de BubbleMesh es exclusivo del Arquitecto Jaime Lazza (Grupo Lazza) en el vertical inmobiliario — no se ofrece ni se menciona en esta propuesta. Central Rock &amp; Mulch se presenta en el nivel <strong>Esencial</strong>: más generoso que el Estándar de mercado por su rol de cliente ancla en el vertical de retail de jardinería/home &amp; garden, pero sin las condiciones ilimitadas reservadas al piloto.</p>
+
+      <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
+          <div>Servicio</div><div>Esencial (Central R&amp;M)</div><div>Estándar</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
+          <div style="font-size:14px;">Página web</div>
+          <div style="font-size:13px; font-weight:600;">1 sitio bilingüe (EN/ES)</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
+          <div style="font-size:14px;">Brandbook IA + Design.md</div>
+          <div style="font-size:13px; font-weight:600;">Incluido, con una ronda de ajustes</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+          <div style="font-size:14px;">Gestión de campañas de marketing</div>
+          <div style="font-size:13px; font-weight:600;">Google + Meta (Instagram/Facebook)</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">Google + 1 plataforma</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+          <div style="font-size:14px;">Estrategia de marketing digital</div>
+          <div style="font-size:13px; font-weight:600;">Mensual</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">Mensual</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+          <div style="font-size:14px;">Creación de Avatar de IA</div>
+          <div style="font-size:13px; font-weight:600;">1 ("Captain Aggregates")</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
+          <div style="font-size:14px;">Chatbot IA</div>
+          <div style="font-size:13px; font-weight:600;">Implementación + optimización mensual</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">Optimización trimestral (solo plan anual)</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; background:rgba(184,106,87,0.05);">
+          <div style="font-size:14px;">Paquete de contenido</div>
+          <div style="font-size:13px; font-weight:600;">4 publicaciones/semana (1 post, 1 video, 2 stories)</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">3 publicaciones/semana (1 post, 1 video, 1 story)</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+          <div style="font-size:14px;">Community Manager</div>
+          <div style="font-size:13px; font-weight:600;">1</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+          <div style="font-size:14px;">Account Manager</div>
+          <div style="font-size:13px; font-weight:600;">1</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.55);">1</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center;">
+          <div style="font-size:14px;">Plataforma a la medida con IA (MVP)</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido — motor de diseño de jardines se cotiza aparte una vez definido el alcance</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; padding:16px 24px; align-items:center;">
+          <div style="font-size:14px;">Descuento con productoras aliadas</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+          <div style="font-size:13px; color:rgba(11,11,11,0.4);">No incluido</div>
+        </div>
+      </div>
+
+      <p style="font-size:13px; line-height:1.6; color:rgba(11,11,11,0.5); max-width:820px; margin:24px auto 0;"><strong style="color:rgba(11,11,11,0.7);">Por qué el paquete de contenido dice 4 y no 6:</strong> la tabla de referencia de Bubble Prop ofrece 6 publicaciones/semana a nivel piloto porque ese cliente ya tiene un mecanismo de producción resuelto. Para Central Rock &amp; Mulch ese mecanismo todavía está pendiente — prometer 6 antes de resolverlo es el mismo error que ya cometieron las agencias anteriores del cliente: contenido sin sustento detrás.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRESUPUESTO ============ -->
+  <section id="presupuesto" data-screen-label="Presupuesto" style="padding:24px 64px 96px; max-width:1280px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:40px;">
+      <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#B86A57; margin-bottom:12px;">Presupuesto del proyecto</div>
+      <h2 style="font-family:'Anton',sans-serif; font-size:40px; margin:0;">Precios de lanzamiento</h2>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid rgba(11,11,11,0.08); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(11,11,11,0.06);">
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; background:#0B0B0B; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.04em; padding:16px 24px;">
+        <div>Módulo</div><div style="text-align:right;">Mensualidad</div><div style="text-align:right;">Configuración inicial</div>
+      </div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
+        <div style="font-size:15px;">Presencia Digital</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$1,800</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$4,500</div>
+      </div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowCoreExtra }}">
+        <div style="font-size:15px;">Funnels Automatizados</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$2,400</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$5,500</div>
+      </div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowExpansionExtra }}">
+        <div style="font-size:15px;">Marketing — Avatar IA</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$2,600</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$1,500</div>
+      </div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:18px 24px; border-bottom:1px solid rgba(11,11,11,0.06); align-items:center; {{ rowRetencionExtra }}">
+        <div style="font-size:15px;">Marketing — Geo-Segmentación</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$1,900</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-size:15px;">$3,000</div>
+      </div>
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; padding:22px 24px; align-items:center; {{ rowCompletoExtra }}">
+        <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:16px;">Sistema Completo (4 módulos)</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">$7,200</div>
+        <div style="text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:17px;">$11,000</div>
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding:20px 24px; background:rgba(124,133,163,0.08); border-radius:8px;">
+      <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.03em; color:#7C85A3;">Nivel seleccionado: {{ scopeLabel }}</div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:16px;">{{ scopeMonthlyLabel }} /mes · {{ scopeSetupLabel }} inicial</div>
+    </div>
+    <p style="font-size:12px; color:rgba(11,11,11,0.45); margin:10px 0 0;">*Geo-Segmentación no incluye presupuesto de medios pagados — se define aparte. Precios ancla del vertical retail de jardinería, calibrados a benchmarks de EE.UU. 2026.</p>
+  </section>
+
+  <!-- ============ CIERRE / CONTACTO ============ -->
+  <section id="contacto" data-screen-label="Contacto" style="background:#0B0B0B; color:#F5F4F0; padding:96px 64px;">
+    <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.3fr 1fr; gap:64px;">
+      <div>
+        <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:#8AA27B; margin-bottom:20px;">Gracias</div>
+        <h2 style="font-family:'Anton',sans-serif; font-size:40px; line-height:1.15; margin:0 0 24px; max-width:520px;">Gracias por la confianza y por compartir el contexto completo de Central Rock &amp; Mulch.</h2>
+        <p style="font-size:16px; line-height:1.65; color:rgba(245,244,240,0.7); max-width:520px; margin:0 0 16px;">El mapa de colonias, el análisis de competencia, la visión detrás de Captain Aggregates — esta propuesta está construida sobre eso, no sobre un paquete genérico. Quedamos atentos a tus comentarios.</p>
+        <p style="font-size:13px; font-family:'IBM Plex Mono',monospace; color:rgba(245,244,240,0.4); max-width:520px; margin:0;">Esta página es material de presentación para la sesión del jueves — no sustituye la cotización formal ni el convenio, y las muestras visuales de arriba se reemplazan por fotografía real una vez firmado.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="background:rgba(245,244,240,0.06); border:1px solid rgba(245,244,240,0.12); border-radius:8px; padding:20px 24px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">Elías Oscar Rico Contreras</div>
+          <div style="font-size:13px; color:rgba(245,244,240,0.55); margin-bottom:8px;">BubbleMesh</div>
+          <a href="mailto:contacto@bubble-mesh.com" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#8AA27B;">contacto@bubble-mesh.com</a>
+        </div>
+        <div style="background:rgba(245,244,240,0.06); border:1px solid rgba(245,244,240,0.12); border-radius:8px; padding:20px 24px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; margin-bottom:4px;">Emily Sisalima</div>
+          <div style="font-size:13px; color:rgba(245,244,240,0.55); margin-bottom:8px;">Sr. Account Manager</div>
+          <a href="mailto:emily@bubble-mesh.com" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#8AA27B; display:block; margin-bottom:2px;">emily@bubble-mesh.com</a>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(245,244,240,0.55);">(+52) 777 417 1226</div>
+        </div>
+        <a href="mailto:contacto@bubble-mesh.com" style="text-align:center; background:#B86A57; color:#F5F4F0; font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; padding:16px 28px; border-radius:8px; margin-top:8px;">bubble-mesh.com</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1000},
+  &quot;language&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;ES&quot;, &quot;options&quot;: [&quot;ES&quot;, &quot;EN&quot;], &quot;tsType&quot;: &quot;'ES' | 'EN'&quot;, &quot;section&quot;: &quot;Demo bilingüe&quot;},
+  &quot;terrainAnimation&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Movimiento&quot;}
+}">
+class Component extends DCLogic {
+  state = {
+    lang: 'ES',
+    scope: 'Completo',
+    terrain0Active: false,
+    terrain1Active: false,
+    scrollY: 0,
+  };
+
+  componentDidMount() {
+    this.props._noop;
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const animate = this.props.terrainAnimation ?? true;
+    if (reduced || !animate) {
+      this.setState({ terrain0Active: true, terrain1Active: true });
+      return;
+    }
+    this._observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === this._t0) this.setState({ terrain0Active: true });
+          if (entry.target === this._t1) this.setState({ terrain1Active: true });
+          this._observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    if (this._t0) this._observer.observe(this._t0);
+    if (this._t1) this._observer.observe(this._t1);
+
+    this._reducedMotion = reduced;
+    if (!reduced) {
+      this._ticking = false;
+      this._onScroll = () => {
+        if (!this._ticking) {
+          window.requestAnimationFrame(() => {
+            this.setState({ scrollY: window.scrollY });
+            this._ticking = false;
+          });
+          this._ticking = true;
+        }
+      };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._observer) this._observer.disconnect();
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+
+  scopeData() {
+    const levels = {
+      'Core': { label: 'Core', monthly: 4200, setup: 10000, order: 1 },
+      'Expansión': { label: 'Expansión', monthly: 6800, setup: 11500, order: 2 },
+      'Retención': { label: 'Retención', monthly: 8700, setup: 14500, order: 3 },
+      'Completo': { label: 'Sistema Completo', monthly: 7200, setup: 11000, order: 4 },
+    };
+    return levels[this.state.scope] || levels['Completo'];
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const isEs = lang === 'ES';
+    const scope = this.state.scope;
+    const scopeInfo = this.scopeData();
+    const order = scopeInfo.order;
+
+    const pillBase = {
+      border: 'none',
+      background: 'transparent',
+      fontFamily: "'Archivo', sans-serif",
+      fontWeight: 700,
+      fontSize: '13px',
+      letterSpacing: '0.03em',
+      textTransform: 'uppercase',
+      padding: '10px 20px',
+      borderRadius: '999px',
+      cursor: 'pointer',
+      transition: 'background 120ms ease-out, color 120ms ease-out',
+    };
+    const pillOn = (color) => ({ ...pillBase, background: color, color: '#F5F4F0' });
+    const pillOff = { ...pillBase, background: 'rgba(11,11,11,0.06)', color: '#0B0B0B' };
+
+    const langBtnBase = {
+      border: 'none',
+      padding: '7px 14px',
+      cursor: 'pointer',
+      fontFamily: "'IBM Plex Mono', monospace",
+      fontSize: '11px',
+      fontWeight: 500,
+    };
+
+    const rowExtra = (rowOrder) => (order >= rowOrder ? 'background:rgba(138,162,123,0.05);' : 'opacity:0.4;');
+
+    const sY = this._reducedMotion ? 0 : this.state.scrollY;
+    const wiggleRotate = Math.sin(sY / 90) * 10;
+    const wiggleFloat = Math.sin(sY / 140) * 14;
+    const wiggleScale = 1 + Math.sin(sY / 110) * 0.05;
+    const parallaxLift = Math.min(sY * 0.18, 90);
+
+    return {
+      registerHeroIcon: (el) => { this._heroIcon = el; },
+      heroIconStyle: {
+        width: '438px',
+        maxWidth: '460px',
+        height: '438px',
+        display: 'block',
+        transform: `translateY(${wiggleFloat - parallaxLift}px) rotate(${wiggleRotate}deg) scale(${wiggleScale})`,
+        transition: this._reducedMotion ? 'none' : 'transform 60ms linear',
+        willChange: 'transform',
+      },
+
+      // language toggle
+      setLangEs: () => this.setState({ lang: 'ES' }),
+      setLangEn: () => this.setState({ lang: 'EN' }),
+      langBtnEsStyle: { ...langBtnBase, background: isEs ? '#0B0B0B' : 'transparent', color: isEs ? '#F5F4F0' : '#0B0B0B' },
+      langBtnEnStyle: { ...langBtnBase, background: !isEs ? '#0B0B0B' : 'transparent', color: !isEs ? '#F5F4F0' : '#0B0B0B' },
+
+      // mockup content driven by lang
+      mockLangEsStyle: { fontWeight: isEs ? 700 : 400, color: isEs ? '#0B0B0B' : 'rgba(11,11,11,0.4)' },
+      mockLangEnStyle: { fontWeight: !isEs ? 700 : 400, color: !isEs ? '#0B0B0B' : 'rgba(11,11,11,0.4)' },
+      mockHeadline: isEs ? 'Grava #57 disponible hoy.' : 'BUILT TO LAST. GROWN TO THRIVE.',
+      mockHeadlineSize: isEs ? 22 : 26,
+      mockSubcopy: isEs ? '$45/yarda. Recoge en sucursal o pide entrega.' : "Not sure where to start? Upload a photo of your yard and we'll help you picture it.",
+      mockCta: isEs ? 'Cotizar por volumen' : 'Start your project',
+
+      // terrain dividers
+      registerTerrain0: (el) => { this._t0 = el; },
+      registerTerrain1: (el) => { this._t1 = el; },
+      terrain0WrapStyle: { padding: '0 64px', maxWidth: '1280px', margin: '0 auto', opacity: this.state.terrain0Active ? 1 : 0.35, filter: this.state.terrain0Active ? 'drop-shadow(0 3px 4px rgba(11,11,11,0.12))' : 'none', transition: 'opacity 480ms ease-in-out, filter 480ms ease-in-out' },
+      terrain1WrapStyle: { padding: '0 64px', maxWidth: '1280px', margin: '0 auto', opacity: this.state.terrain1Active ? 1 : 0.35, filter: this.state.terrain1Active ? 'drop-shadow(0 3px 4px rgba(11,11,11,0.12))' : 'none', transition: 'opacity 480ms ease-in-out, filter 480ms ease-in-out' },
+      terrain0StrokeWidth: this.state.terrain0Active ? 2.4 : 1.4,
+      terrain1StrokeWidth: this.state.terrain1Active ? 2.4 : 1.4,
+
+      // scope selector
+      setScopeCore: () => this.setState({ scope: 'Core' }),
+      setScopeExpansion: () => this.setState({ scope: 'Expansión' }),
+      setScopeRetencion: () => this.setState({ scope: 'Retención' }),
+      setScopeCompleto: () => this.setState({ scope: 'Completo' }),
+      scopeBtnCoreStyle: scope === 'Core' ? pillOn('#7C85A3') : pillOff,
+      scopeBtnExpansionStyle: scope === 'Expansión' ? pillOn('#B86A57') : pillOff,
+      scopeBtnRetencionStyle: scope === 'Retención' ? pillOn('#8AA27B') : pillOff,
+      scopeBtnCompletoStyle: scope === 'Completo' ? pillOn('#0B0B0B') : pillOff,
+
+      rowCoreExtra: rowExtra(1),
+      rowExpansionExtra: rowExtra(2),
+      rowRetencionExtra: rowExtra(3),
+      rowCompletoExtra: order === 4 ? 'background:rgba(184,106,87,0.06);' : 'opacity:0.55;',
+
+      scopeLabel: scopeInfo.label,
+      scopeMonthlyLabel: '$' + scopeInfo.monthly.toLocaleString('en-US'),
+      scopeSetupLabel: '$' + scopeInfo.setup.toLocaleString('en-US'),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
