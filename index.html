@@ -243,14 +243,20 @@
                 <div style="width:28px; height:28px; border-radius:999px; background:#B86A57;"></div>
                 <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px;">centralrockandmulch</div>
               </div>
-              <div style="aspect-ratio:1/1; background:linear-gradient(135deg,#C99A3E,#B86A57); display:flex; align-items:center; justify-content:center; position:relative;">
-                <div style="width:70px; height:70px; border-radius:999px; background:#7C85A3; border:4px solid #F5F4F0;"></div>
-                <div style="position:absolute; bottom:8px; left:8px; right:8px; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#F5F4F0; background:rgba(11,11,11,0.35); padding:4px 6px; border-radius:4px;">{{ d.igCaption }}</div>
+              <div style="position:relative; aspect-ratio:4/5; background:#000; overflow:hidden;">
+                <video src="{{ vidSrc }}" poster="{{ vidPoster }}" controls="controls" playsinline="playsinline" preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block; background:#000;"></video>
+                <div style="position:absolute; top:8px; right:8px; background:rgba(11,11,11,0.62); color:#F5F4F0; font-family:'IBM Plex Mono',monospace; font-size:8px; padding:3px 8px; border-radius:999px; pointer-events:none;">{{ vidCounter }}</div>
+                <div onclick="{{ prevVid }}" style="position:absolute; left:6px; top:50%; transform:translateY(-50%); width:22px; height:22px; border-radius:999px; background:rgba(245,244,240,0.9); display:flex; align-items:center; justify-content:center; font-size:13px; color:#0B0B0B; cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,0.3);">‹</div>
+                <div onclick="{{ nextVid }}" style="position:absolute; right:6px; top:50%; transform:translateY(-50%); width:22px; height:22px; border-radius:999px; background:rgba(245,244,240,0.9); display:flex; align-items:center; justify-content:center; font-size:13px; color:#0B0B0B; cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,0.3);">›</div>
               </div>
-              <div style="padding:12px 14px; display:flex; gap:12px; font-size:16px;">
+              <div style="display:flex; gap:5px; justify-content:center; padding:8px 0 4px;">
+                <div style="{{ vidDot0 }}"></div>
+                <div style="{{ vidDot1 }}"></div>
+              </div>
+              <div style="padding:6px 14px 0; display:flex; gap:12px; font-size:16px;">
                 <span>♡</span><span>💬</span><span>↗</span>
               </div>
-              <div style="padding:0 14px; font-size:11px; line-height:1.5;"><strong>centralrockandmulch</strong> {{ d.igPost }}</div>
+              <div style="padding:2px 14px 0; font-size:11px; line-height:1.5;"><strong>centralrockandmulch</strong> {{ d.igPost }}</div>
             </div>
           </x-import>
         </div>
@@ -470,6 +476,7 @@ class Component extends DCLogic {
     mat0: true,
     mat1: true,
     mat2: false,
+    vidIndex: 0,
   };
 
   componentDidMount() {
@@ -829,6 +836,12 @@ class Component extends DCLogic {
     if (this.state.mat1) selMats.push(d.iosVizOpt2);
     if (this.state.mat2) selMats.push(d.iosVizOpt3);
 
+    // carrusel de videos del post de Instagram
+    const vids = ['assets/reel1.mp4', 'assets/reel2.mp4'];
+    const vidPosters = ['assets/reel1-poster.jpg', 'assets/reel2-poster.jpg'];
+    const vi = this.state.vidIndex % vids.length;
+    const vidDot = (on) => ({ width: on ? '7px' : '6px', height: on ? '7px' : '6px', borderRadius: '999px', background: on ? '#B86A57' : 'rgba(11,11,11,0.22)' });
+
     const rowOn = (mod) => (scope === 'Completo' || scope === mod ? 'background:rgba(138,162,123,0.05);' : 'opacity:0.4;');
 
     const sY = this._reducedMotion ? 0 : this.state.scrollY;
@@ -877,6 +890,15 @@ class Component extends DCLogic {
       vizInputStyle: { ...vizStateBase, display: this.state.vizOn ? 'none' : 'flex', padding: '18px 16px' },
       vizGeneratedStyle: { ...vizStateBase, display: this.state.vizOn ? 'flex' : 'none' },
       vizMatsLabel: selMats.length ? selMats.join(' + ') : d.vizNone,
+
+      // carrusel de videos (post de Instagram, módulo Marketing)
+      vidSrc: vids[vi],
+      vidPoster: vidPosters[vi],
+      vidCounter: (vi + 1) + '/' + vids.length,
+      nextVid: () => this.setState({ vidIndex: (this.state.vidIndex + 1) % vids.length }),
+      prevVid: () => this.setState({ vidIndex: (this.state.vidIndex - 1 + vids.length) % vids.length }),
+      vidDot0: vidDot(vi === 0),
+      vidDot1: vidDot(vi === 1),
 
       // terrain dividers
       registerTerrain0: (el) => { this._t0 = el; },
