@@ -177,15 +177,15 @@
                 <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:rgba(11,11,11,0.55); margin-bottom:8px;">{{ d.vizChoose }}</div>
                 <div style="display:flex; gap:8px; overflow-x:auto; padding-bottom:4px;">
                   <div onclick="{{ toggleMat0 }}" style="{{ matCardStyle0 }}">
-                    <div style="height:44px; background:radial-gradient(circle at 30% 30%, #d2ccc1, #a89e8d);"></div>
+                    <div style="height:44px; background-image:url('assets/mat-grava.jpg'); background-size:cover; background-position:center;"></div>
                     <div style="font-size:9px; font-weight:600; padding:5px 4px; text-align:center; white-space:nowrap;">{{ d.iosVizOpt1 }}</div>
                   </div>
                   <div onclick="{{ toggleMat1 }}" style="{{ matCardStyle1 }}">
-                    <div style="height:44px; background:linear-gradient(135deg,#7a5230,#49301a);"></div>
+                    <div style="height:44px; background-image:url('assets/mat-mulch.jpg'); background-size:cover; background-position:center;"></div>
                     <div style="font-size:9px; font-weight:600; padding:5px 4px; text-align:center; white-space:nowrap;">{{ d.iosVizOpt2 }}</div>
                   </div>
                   <div onclick="{{ toggleMat2 }}" style="{{ matCardStyle2 }}">
-                    <div style="height:44px; background:linear-gradient(135deg,#dccdb0,#b39b74);"></div>
+                    <div style="height:44px; background-image:url('assets/mat-piedra.jpg'); background-size:cover; background-position:center;"></div>
                     <div style="font-size:9px; font-weight:600; padding:5px 4px; text-align:center; white-space:nowrap;">{{ d.iosVizOpt3 }}</div>
                   </div>
                 </div>
@@ -194,9 +194,9 @@
                 <div style="margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#7C85A3;">{{ d.iosVizFoot }}</div>
               </div>
 
-              <!-- ESTADO 2 · GENERADO: imagen generada con IA (placeholder: assets/hero-garden.jpg) -->
+              <!-- ESTADO 2 · GENERADO: imagen generada con IA -->
               <div style="{{ vizGeneratedStyle }}">
-                <div style="flex:1; position:relative; background-image:url('assets/hero-garden.jpg'); background-size:cover; background-position:center;">
+                <div style="flex:1; position:relative; background-image:url('assets/viz-generada.jpg'); background-size:cover; background-position:center;">
                   <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,11,11,0.35) 0%, transparent 28%, transparent 52%, rgba(11,11,11,0.66) 100%);"></div>
                   <div style="position:absolute; top:12px; left:12px; background:rgba(11,11,11,0.6); color:#F5F4F0; font-family:'IBM Plex Mono',monospace; font-size:8px; padding:5px 9px; border-radius:999px;">✨ {{ d.vizGenBadge }}</div>
                   <div style="position:absolute; bottom:58px; left:14px; right:14px; color:#F5F4F0;">
